@@ -1,13 +1,11 @@
-// pages/games/vraifaux/question/[id].js
 import React, { useState } from 'react';
 import {useRouter} from 'next/router';
 
-const data = require('../../../../data/vraifaux.json');
+const data = require('../../../data/vraifaux.json');
 
-export default function QuestionPage({onGameFinish,id }) {
+const QuestionPage = ({onGameFinish, id}) => {
     const router = useRouter();
     const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
-    const {id} = router.query;
 
     // Convertis l'ID en nombre
     const questionId = parseInt(id, 10);
@@ -68,3 +66,5 @@ export default function QuestionPage({onGameFinish,id }) {
         </div>
     );
 }
+
+export default QuestionPage
