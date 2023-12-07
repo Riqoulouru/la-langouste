@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "question": "Combien font 5 + 7 ?",
+      "reponse": "12"
+    },
+    {
+      "id": 2,
+      "question": "Quelle est la racine carrée de 25 ?",
+      "reponse": "5"
+    },
+    {
+      "id": 3,
+      "question": "Combien de millimètres y a-t-il dans un mètre ?",
+      "reponse": "1000"
+    },
+    {
+      "id": 4,
+      "question": "Quelle est la valeur de π (pi) ?",
+      "reponse": "3.14159"
+    }
+  ]
+  
