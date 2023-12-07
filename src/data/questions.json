@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "question": "Quels sont les véhicules qui consomment le plus de carburant?",
+    "reponses": [
+      "avion",
+      "voiture",
+      "bateau"
+    ],
+    "proposition": [
+      "voiture",
+      "moto",
+      "vélo",
+      "bus",
+      "train",
+      "tramway",
+      "camion",
+      "véhicule tout-terrain (VTT)",
+      "trottinette",
+      "skateboard",
+      "avion",
+      "hélicoptère",
+      "montgolfière",
+      "planeur",
+      "drone",
+      "bateau",
+      "navire",
+      "paquebot",
+      "yacht",
+      "voilier",
+      "ferry",
+      "sous-marin",
+      "téléphérique",
+      "télécabine",
+      "funiculaire",
+      "segway"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Classez les sources d'émissions de dioxyde de carbone (CO2) du plus élevé au moins élevé.",
+    "reponses": [
+      "La combustion des énergies fossiles",
+      "La déforestation",
+      "Les déchets industriels"
+    ],
+    "proposition": [
+      "voiture",
+      "moto",
+      "vélo",
+      "bus",
+      "train",
+      "tramway",
+      "camion",
+      "véhicule tout-terrain (VTT)",
+      "trottinette",
+      "skateboard",
+      "avion",
+      "hélicoptère",
+      "montgolfière",
+      "planeur",
+      "drone",
+      "bateau",
+      "navire",
+      "paquebot",
+      "yacht",
+      "voilier",
+      "ferry",
+      "sous-marin",
+      "téléphérique",
+      "télécabine",
+      "funiculaire",
+      "segway"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Quels modes de transport sont considérés comme plus écologiques?",
+    "reponses": [
+      "Le vélo",
+      "Le covoiturage",
+      "La voiture individuelle"
+    ],
+    "proposition": [
+      "voiture",
+      "moto",
+      "vélo",
+      "bus",
+      "train",
+      "tramway",
+      "camion",
+      "véhicule tout-terrain (VTT)",
+      "trottinette",
+      "skateboard",
+      "avion",
+      "hélicoptère",
+      "montgolfière",
+      "planeur",
+      "drone",
+      "bateau",
+      "navire",
+      "paquebot",
+      "yacht",
+      "voilier",
+      "ferry",
+      "sous-marin",
+      "téléphérique",
+      "télécabine",
+      "funiculaire",
+      "segway"
+    ]
+  }
+]
