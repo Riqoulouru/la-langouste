@@ -1,22 +1,12 @@
-// pages/index.js
 
-import Link from 'next/link';
+import Link from "next/link";
+import QuestionPage from "@/pages/games/vraifaux/qcm";
 
-const HomePage = () => {
-  return (
-    <div>
-      <h1>INDEX JS</h1>
-      {/* Votre contenu de la page ici */}
-      
-      {/* Exemple de lien vers une autre page */}
-      <Link href="/games/justeprix">
-        JUSTE PRIX
-      </Link>
-
-      {/* Ajoutez l'icône de la langouste dans la barre du navigateur (favicon) */}
-      <link rel="icon" type="image/svg+xml" href="../lobster-svgrepo-com.svg" />
-    </div>
-  );
-};
-
-export default HomePage;
+export default function Page() {
+    return (
+        <div>
+            <Link href={"/games/top10"}>GO</Link>
+            <QuestionPage id={2}></QuestionPage>
+        </div>
+    )
+}
