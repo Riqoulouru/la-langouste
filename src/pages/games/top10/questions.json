@@ -1,0 +1,26 @@
+[
+  {
+    "question": "Quels sont les véhicules qui consomment le plus de carburant?",
+    "reponses": [
+      "L'avion",
+      "La voiture",
+      "Le camion"
+    ]
+  },
+  {
+    "question": "Classez les sources d'émissions de dioxyde de carbone (CO2) du plus élevé au moins élevé.",
+    "reponses": [
+      "La combustion des énergies fossiles",
+      "La déforestation",
+      "Les déchets industriels"
+    ]
+  },
+  {
+    "question": "Quels modes de transport sont considérés comme plus écologiques?",
+    "reponses": [
+      "Le vélo",
+      "Le covoiturage",
+      "La voiture individuelle"
+    ]
+  }
+]

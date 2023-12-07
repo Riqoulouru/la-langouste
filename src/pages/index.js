@@ -1,5 +1,5 @@
 import Link from "next/link";
 
 export default function Page() {
-    return <Link href={"/test/test"}>GO</Link>
+    return <Link href={"/games/top10"}>GO</Link>
 }
