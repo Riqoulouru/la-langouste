@@ -1,30 +1,32 @@
 {
   "questions": [
     {
-      "question": "La langouste est-elle écolo ?",
-      "reponses": {
-        "a": {
+      "id": 1,
+      "question": "Les émissions mondiales de gaz à effet de serre devront baisser à partir de 2025, sans quoi il sera impossible de limiter le réchauffement de la planète à 1,5°C.",
+      "reponses": [
+        {
           "label": "Vrai",
           "result": true
         },
-        "b": {
+        {
           "label": "Faux",
           "result": false
         }
-      }
+      ]
     },
     {
-      "question": "Qu'en est-il de la mangouste ?",
-      "reponses": {
-        "a": {
+      "id": 2,
+      "question": "La montée du niveau de la mer est évitable dans les années à venir",
+      "reponses": [
+        {
           "label": "Vrai",
-          "result": true
-        },
-        "b": {
-          "label": "Faux",
           "result": false
+        },
+        {
+          "label": "Faux",
+          "result": true
         }
-      }
+      ]
     }
   ]
 }
