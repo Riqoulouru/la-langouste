@@ -1,0 +1,30 @@
+{
+  "questions": [
+    {
+      "question": "La langouste est-elle écolo ?",
+      "reponses": {
+        "a": {
+          "label": "Vrai",
+          "result": true
+        },
+        "b": {
+          "label": "Faux",
+          "result": false
+        }
+      }
+    },
+    {
+      "question": "Qu'en est-il de la mangouste ?",
+      "reponses": {
+        "a": {
+          "label": "Vrai",
+          "result": true
+        },
+        "b": {
+          "label": "Faux",
+          "result": false
+        }
+      }
+    }
+  ]
+}
