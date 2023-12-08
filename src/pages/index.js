@@ -23,11 +23,7 @@ export default function Page() {
 
     return (
         <div>
-            <Link href="/games/top10">GO</Link>
-            <QuestionPage id={2}></QuestionPage>
-
-            {/* Utilise Konami component uniquement si l'easter egg n'est pas encore activé */}
-            {!easterEggActivated && <Konami action={easterEgg} />}
+<Link href={"/games/Game"}>GO</Link>
         </div>
     );
 }
