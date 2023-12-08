@@ -34,6 +34,7 @@ const HomePage = () => {
     const [timerStarted, setTimerStarted] = useState(false);
     const [gamePossible, setGamePossible] = useState(1);
     const [errorMessage, setErrorMessage] = useState('');
+    const [alertShown, setAlertShown] = useState(false);
     const easterEgg = () => {
         setEasterEggActivated(true);
     }
@@ -72,9 +73,11 @@ const HomePage = () => {
 
         if (level !== gamePossible) {
             setErrorMessage("Vous n'avez pas encore débloqué ce niveau")
+            setAlertShown(true)
             return;
         }
         setErrorMessage("")
+        setAlertShown(false)
         setSideBarWidth("60vw")
         setIcebergWidth("40vw")
         setTimerStarted(true);
@@ -132,7 +135,7 @@ const HomePage = () => {
 
 
             {
-                alertShown ? <Alert severity="error">{errorMessage}</Alert>
+                alertShown ? <Alert className={"alert-stp"} severity="error" onClose={() => {setAlertShown(false)}}>{errorMessage}</Alert>
                 : <div></div>
             }
             <div className={"iceberg"} style={{width: icebergWidth}}>
