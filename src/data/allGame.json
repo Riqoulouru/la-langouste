@@ -5,7 +5,15 @@
       "1": {
         "id": 1,
         "name": "Famille"
-      }
+      },
+    "2": {
+      "id": 2,
+      "name": "JustePrix"
+    },
+    "3": {
+      "id": 1,
+      "name": "qcm"
+    }
     }
   },
   {

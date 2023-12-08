@@ -1,0 +1,96 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "The rise in sea level is avoidable in the coming years.",
+      "reponses": [
+        {
+          "label": "True",
+          "result": false
+        },
+        {
+          "label": "False",
+          "result": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Climate change leads to the extinction of certain animal and plant species.",
+      "reponses": [
+        {
+          "label": "True",
+          "result": true
+        },
+        {
+          "label": "False",
+          "result": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Decarbonization is a solution to avoid global warming.",
+      "reponses": [
+        {
+          "label": "True",
+          "result": false
+        },
+        {
+          "label": "False",
+          "result": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "By improving our environmental habits, we could achieve a 30% to 40% reduction in greenhouse gas emissions by 2050.",
+      "reponses": [
+        {
+          "label": "True",
+          "result": false
+        },
+        {
+          "label": "False",
+          "result": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Global greenhouse gas emissions must decrease from 2025, otherwise it will be impossible to limit global warming to 1.5°C.",
+      "reponses": [
+        {
+          "label": "True",
+          "result": true
+        },
+        {
+          "label": "False",
+          "result": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "What percentage of the population is threatened by rising sea levels?",
+      "reponses": [
+        {
+          "label": "1%",
+          "result": false
+        },
+        {
+          "label": "2%",
+          "result": false
+        },
+        {
+          "label": "5%",
+          "result": false
+        },
+        {
+          "label": "10%",
+          "result": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import jsonFamille from '@/data/jsonFamille.json';
 import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
+import {TextField} from "@mui/material";
 
 
 const GamePage = ({onGameFinish,id }) => {
@@ -52,7 +53,7 @@ const GamePage = ({onGameFinish,id }) => {
             const updatedAnswers = [...foundAnswers];
             updatedAnswers[index] = userAnswer;
             setFoundAnswers(updatedAnswers);
-            setFeedback(`Bonne réponse! Position : ${index + 1}`);
+            setFeedback(`Bonne réponse ! Position : ${index + 1}`);
         } else {
             setChancesLeft(chancesLeft - 1);
             setFeedback(`Mauvaise réponse. Il te reste ${chancesLeft - 1} chances.`);
@@ -65,39 +66,55 @@ const GamePage = ({onGameFinish,id }) => {
 
 
     return (
-        <div>
+        <div className={"game-container"}>
             {currentQuestion ? (
                 <div>
-                    <h1>{currentQuestion.question}</h1>
-                    <input type="text" value={userInput} onChange={handleInputChange} />
-                    <button onClick={handleSubmit}>Soumettre</button>
-                    <p>{feedback}</p>
-                    <p>Chances restantes: {chancesLeft}</p>
+                    <h1 className={"title"}>{currentQuestion.question}</h1>
+
+                    <div className={"game-row spacer-4"}>
+                        <TextField
+                            size="small"
+                            label="Enter your text"
+                            variant="outlined"
+                            value={userInput}
+                            onChange={handleInputChange}
+                        />
+                        <button className={"language-button"} onClick={handleSubmit}>Soumettre</button>
+                    </div>
+                    <div className={"spacer-4"}>{feedback}</div>
+                    <div className={"spacer-2"}>Chances restantes: {chancesLeft}</div>
                     <div>
                         <h3>Réponses trouvées :</h3>
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Position</th>
-                                <th>Réponse</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {foundAnswers.map((answer, index) => (
-                                <tr key={index}>
-                                    <td>{index + 1}</td>
-                                    <td>{answer}</td>
+
+                        <div className={"table-container"}>
+                            <table className={"table"}>
+                                <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Réponse</th>
                                 </tr>
-                            ))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                {foundAnswers.map((answer, index) => (
+                                    <tr key={index}>
+                                        <td>{index + 1}</td>
+                                        <td>{answer}</td>
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </table>
+
+                            <div>
+                                <p>Propositions possibles :</p>
+                                <ul>
+                                    {currentQuestion.proposition.map((prop, index) => (
+                                        <li key={index}>{prop}</li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                        </div>
                     </div>
-                    <p>Propositions possibles :</p>
-                    <ul>
-                        {currentQuestion.proposition.map((prop, index) => (
-                            <li key={index}>{prop}</li>
-                        ))}
-                    </ul>
                 </div>
             ) : (
                 <p>Chargement...</p>

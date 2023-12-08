@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "question": "What are the most polluting countries in 2021?",
+    "reponses": [
+      "China",
+      "USA",
+      "India",
+      "Russia",
+      "Japan"
+    ],
+    "proposition": [
+      "USA",
+      "France",
+      "India",
+      "Germany",
+      "South Korea",
+      "Brazil",
+      "China",
+      "Canada",
+      "Japan",
+      "United Kingdom",
+      "Russia"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What are the most polluting vehicles in 2020?",
+    "reponses": [
+      "Car",
+      "Truck",
+      "Plane",
+      "Train",
+      "Bus"
+    ],
+    "proposition": [
+      "Plane",
+      "Boat",
+      "Motorcycle",
+      "Bus",
+      "Bicycle",
+      "Rollerblade",
+      "Truck",
+      "Train",
+      "Skateboard",
+      "Car"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "In 2019, what sectors emitted the most greenhouse gases?",
+    "reponses": [
+      "Energy production",
+      "Industry",
+      "Agriculture",
+      "Transportation",
+      "Construction"
+    ],
+    "proposition": [
+      "Transportation",
+      "Finance",
+      "Construction",
+      "Energy production",
+      "Tourism",
+      "Agriculture",
+      "Telecommunications",
+      "Media",
+      "Sports",
+      "Industry"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What is the share of the most used renewable energies in 2020?",
+    "reponses": [
+      "Hydroelectric",
+      "Wind",
+      "Biomass",
+      "Geothermal",
+      "Solar"
+    ],
+    "proposition": [
+      "Tidal",
+      "Solar",
+      "Wind",
+      "Biogas",
+      "Urban thermal",
+      "Geothermal",
+      "Hydroelectric",
+      "Marine thermal",
+      "Biomass",
+      "Tidal stream"
+    ]
+  }
+]

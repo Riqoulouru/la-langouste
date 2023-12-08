@@ -2,9 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../../styles/JustePrixPage.module.css';
+import jsonJustePrixEn from '@/data/jsonJustePrixEn.json';
 import jsonJustePrix from '@/data/justeprix.json';
+import jsonJustePrixCh from '@/data/jsonJustePrixCh.json';
+import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
-const JustePrixPage = ({onGameFinish,id}) => {
+const JustePrixPage = ({ onGameFinish, id }) => {
+  const { t, i18n } = useTranslation('translation');
   const router = useRouter();
   const [userInput, setUserInput] = useState('');
   const [currentQuestion, setCurrentQuestion] = useState(null);
@@ -13,7 +18,22 @@ const JustePrixPage = ({onGameFinish,id}) => {
   useEffect(() => {
     // Fetch the question based on the ID from the URL or a parameter
 
-    const selectedQuestion = jsonJustePrix.find((question) => question.id === parseInt(id, 10));
+    let jsonQuestions;
+    console.log("QCM")
+    console.log(i18n.language)
+    switch (i18n.language) {
+      case 'en':
+        jsonQuestions = jsonJustePrixEn;
+        break;
+      case 'ch':
+          jsonQuestions = jsonJustePrixCh;
+          break;
+      // Add more cases for other languages if needed
+      default:
+        jsonQuestions = jsonJustePrix;
+    }
+
+    const selectedQuestion = jsonQuestions.find((question) => question.id === parseInt(id, 10));
 
     if (selectedQuestion) {
       setCurrentQuestion(selectedQuestion);
@@ -22,7 +42,7 @@ const JustePrixPage = ({onGameFinish,id}) => {
       // Handle the case where the ID is not found
       console.error('Question not found for the provided ID.');
     }
-  }, [router.query, userInput]); // Added userInput to trigger useEffect when the user submits an answer
+  }, [router.query, router.locale, userInput]); // Added userInput to trigger useEffect when the user submits an answer
 
   const handleInputChange = (e) => {
     setUserInput(e.target.value);
@@ -37,30 +57,30 @@ const JustePrixPage = ({onGameFinish,id}) => {
 
     if (!isNaN(userAnswer)) {
       if (userAnswer === correctAnswer) {
-        setMessage('Bravo ! La réponse est correcte.');
+        setMessage(t('congratulations'));
         onGameFinish(true);
       } else if (userAnswer < correctAnswer) {
-        setMessage('Désolé, la réponse est incorrecte. C\'est plus. Essayez à nouveau.');
+        setMessage(t('incorrecthigher'));
         onGameFinish(false);
       } else {
-        setMessage('Désolé, la réponse est incorrecte. C\'est moins. Essayez à nouveau.');
+        setMessage(t('incorrectlower'));
         onGameFinish(false);
       }
 
     } else {
-      setMessage('Veuillez entrer un nombre valide.');
+      setMessage(t('incorrectnumber'));
     }
   };
 
   return (
     <div className={styles.container}>
-      <h1>Juste Prix Game</h1>
+      <h1>{t('rightpricename')}</h1>
       {currentQuestion ? (
         <div>
           <p>{currentQuestion.question}</p>
           <form onSubmit={handleSubmit}>
             <label className={styles.label}>
-              Entrez votre estimation :
+            {t('estimate')}
               <input
                 type="number"
                 value={userInput}
@@ -69,12 +89,12 @@ const JustePrixPage = ({onGameFinish,id}) => {
               />
             </label>
             <button type="submit" className={styles.button}>
-              Valider
+              {t('submit')}
             </button>
           </form>
         </div>
       ) : (
-        <p>La question n'a pas pu être chargée.</p>
+        <p>t('questionnotloaded')</p>
       )}
       {message && <p className={styles.message}>{message}</p>}
     </div>
