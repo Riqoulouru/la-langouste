@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, {useMemo} from 'react';
 
 const IcebergComponent = ({temperature}) => {
 
@@ -11,7 +11,7 @@ const IcebergComponent = ({temperature}) => {
 
     return (
         <div>
-            <p>Température actuelle : {temperature}°C</p>
+            <div className={"temperature-container"}>Température actuelle : {temperature}°C</div>
             <div style={{ width: '300px', height: '300px' }}>
                 <svg cache-id="c81abccd000c4dfc88da8cbdb81b1437" id="iceberg" viewBox="0 0 1080 1920" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                     <clipPath id="icebergClip">

@@ -6,6 +6,7 @@ import EasterEggModal from '../components/EasterEggModal'; // Assure-toi d'ajust
 import Link from 'next/link';
 import Konami from 'react-konami-code';
 import styles from "@/styles/Home.module.scss"
+import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
 
 const HomePage = () => {
     const { t, i18n } = useTranslation('translation');
@@ -16,6 +17,8 @@ const HomePage = () => {
 
 
     const [easterEggActivated, setEasterEggActivated] = useState(false);
+    const [helpDisplayed, setHelpDisplayed] = useState(false);
+    const [sideBarWidth, setSideBarWidth] = useState('0');
 
     const easterEgg = () => {
         alert(t('konami'));
@@ -44,27 +47,47 @@ const HomePage = () => {
         return () => clearTimeout(resetTimeout);
     }, [easterEggActivated]);
 
+    const handleCloseModal = () => {
+        setHelpDisplayed(false);
+    }
+
     return (
-        <div>
-      <IcebergComponent />
-            <h1>{t('welcome')}</h1>
-            <p>{t('hello')}</p>
+        <div className={"main-content"}>
+            <div className={"side-bar"} style={{ width: sideBarWidth }}></div>
 
-            {/* Changer la langue avec des boutons */}
-            <div className={styles.test}>
-                <button onClick={() => changeLanguage('fr')}>Français 🇫🇷</button>
-                <button onClick={() => changeLanguage('en')}>English 🇬🇧/🇺🇸</button>
-                <button onClick={() => changeLanguage('ch')}>中文  🇨🇳</button>
-                <br/>
-                <Link href={"/games/Game"}>GO</Link>
+            <div>
 
-                {/* Utilise Konami component uniquement si l'easter egg n'est pas encore activé */}
-                {!easterEggActivated && <Konami action={easterEgg} />}
+                <IcebergComponent />
 
-                {/* Utilise le composant modal si l'easter egg est activé */}
-                {easterEggActivated && <EasterEggModal isOpen={easterEggActivated} onRequestClose={closeModal} />}
+                <div className={"language-container"}>
+                    <button className={"language-button"} onClick={() => changeLanguage('fr')}>Français 🇫🇷</button>
+                    <button className={"language-button"} onClick={() => changeLanguage('en')}>English 🇬🇧/🇺🇸</button>
+                    <button onClick={() => changeLanguage('ch')}>中文  🇨🇳</button>
+                    <button className={"help-button"} onClick={() => setHelpDisplayed(true)}> ? </button>
+                    {easterEggActivated && <EasterEggModal isOpen={easterEggActivated} onRequestClose={closeModal} />}
+                    {!easterEggActivated && <Konami action={easterEgg} />}
+                </div>
+
+                <Dialog
+                    open={helpDisplayed}
+                    onClose={handleCloseModal}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                >
+                    <DialogTitle id="alert-dialog-title">
+                        {"Quelques info à pour jouer !"}
+                    </DialogTitle>
+                    <DialogContent>
+                        <DialogContentText id="alert-dialog-description">
+                            sususususus
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <button className={"language-button"} onClick={() => setHelpDisplayed(false)}>Fermer</button>
+                    </DialogActions>
+                </Dialog>
+
             </div>
-
         </div>
 
     );
