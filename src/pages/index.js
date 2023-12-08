@@ -1,7 +1,12 @@
+
 // pages/index.js
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Konami from 'react-konami-code';
+import styles from "@/styles/Home.module.scss"
 
 const HomePage = () => {
   const { t, i18n } = useTranslation('translation');
@@ -9,6 +14,22 @@ const HomePage = () => {
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
+  
+      const [easterEggActivated, setEasterEggActivated] = useState(false);
+
+    const easterEgg = () => {
+        alert('Hey, you typed the Konami Code!');
+        setEasterEggActivated(true);
+    }
+
+    useEffect(() => {
+        // Reset l'état d'activation après un certain temps (par exemple, 5 secondes)
+        const resetTimeout = setTimeout(() => {
+            setEasterEggActivated(false);
+        }, 5000);
+
+        return () => clearTimeout(resetTimeout);
+    }, [easterEggActivated]);
 
   return (
     <div>
@@ -16,9 +37,11 @@ const HomePage = () => {
       <p>{t('hello')}</p>
 
       {/* Changer la langue avec des boutons */}
-      <div>
+      <div className={styles.test}>
         <button onClick={() => changeLanguage('fr')}>Français</button>
         <button onClick={() => changeLanguage('en')}>English</button>
+        <Link href={"/games/Game"}>GO</Link>
+            {!easterEggActivated && <Konami action={easterEgg} />}
       </div>
 
       <div>
@@ -27,10 +50,5 @@ const HomePage = () => {
         </Link>
       </div>
 
-      {/* Ajoutez l'icône de la langouste dans la barre du navigateur (favicon) */}
-      <link rel="icon" type="image/svg+xml" href="../lobster-svgrepo-com.svg" />
-    </div>
-  );
-};
-
-export default HomePage;
+    );
+}
