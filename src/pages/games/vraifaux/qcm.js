@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {useRouter} from 'next/router';
 
-const data = require('../../../data/vraifaux.json');
+import jsonQCM from '@/data/jsonQCM.json';
 
 const QuestionPage = ({onGameFinish, id}) => {
     const router = useRouter();
@@ -16,7 +16,7 @@ const QuestionPage = ({onGameFinish, id}) => {
     }
 
     // Récupère la question correspondante
-    const question = data.questions.find((q) => q.id === questionId);
+    const question = jsonQCM.questions.find((q) => q.id === questionId);
 
     if (question === undefined) {
         return <p>Question non trouvée</p>
@@ -33,10 +33,12 @@ const QuestionPage = ({onGameFinish, id}) => {
 
             if (selectedLabel === correctAnswer.label) {
                 setIsAnswerCorrect(true);
+                onGameFinish(true);
             } else {
                 setIsAnswerCorrect(false);
+                onGameFinish(false);
             }
-            onGameFinish(true);
+
         }
     };
 
