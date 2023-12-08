@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Konami from 'react-konami-code';
 
-import QuestionPage from '@/pages/games/vraifaux/qcm';
-
 export default function Page() {
     const [easterEggActivated, setEasterEggActivated] = useState(false);
 
@@ -23,7 +21,9 @@ export default function Page() {
 
     return (
         <div>
-<Link href={"/games/Game"}>GO</Link>
+            <Link href={"/games/Game"}>GO</Link>
+            {/* Utilise Konami component uniquement si l'easter egg n'est pas encore activé */}
+            {!easterEggActivated && <Konami action={easterEgg} />}
         </div>
     );
 }
