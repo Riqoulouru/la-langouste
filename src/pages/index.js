@@ -35,6 +35,15 @@ const HomePage = () => {
         return () => clearTimeout(resetTimeout);
     }, [easterEggActivated]);
 
+    useEffect(() => {
+        // Reset l'état d'activation après un certain temps (par exemple, 5 secondes)
+        const resetTimeout = setTimeout(() => {
+            setEasterEggActivated(false);
+        }, 5000);
+
+        return () => clearTimeout(resetTimeout);
+    }, [easterEggActivated]);
+
     return (
         <div>
             <h1>{t('welcome')}</h1>
@@ -46,7 +55,12 @@ const HomePage = () => {
                 <button onClick={() => changeLanguage('en')}>English</button>
                 <br/>
                 <Link href={"/games/Game"}>GO</Link>
+
+                {/* Utilise Konami component uniquement si l'easter egg n'est pas encore activé */}
                 {!easterEggActivated && <Konami action={easterEgg} />}
+
+                {/* Utilise le composant modal si l'easter egg est activé */}
+                {easterEggActivated && <EasterEggModal isOpen={easterEggActivated} onRequestClose={closeModal} />}
             </div>
 
         </div>
