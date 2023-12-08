@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import jsonGame from '../../data/allGame.json';
+import jsonGame from '@/data/jsonSommaire.json';
 import JustePrix from "@/pages/games/justeprix/justePrix";
 import Famille from "@/pages/games/top10/famille";
 import Qcm from "@/pages/games/vraifaux/qcm";

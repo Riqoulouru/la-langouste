@@ -7,7 +7,7 @@ import SideBar from '../components/SideBar';
 import Konami from 'react-konami-code';
 import styles from "@/styles/Home.module.scss"
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
-import jsonGame from "@/data/allGame.json";
+import jsonGame from "@/data/jsonSommaire.json";
 
 
 
@@ -136,7 +136,7 @@ const HomePage = () => {
 
     return (
         <div className={"main-content"}>
-            <SideBar gameFinished={gameFinished} currentGame={currentGameIndex} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} />
+            <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} />
             <div></div>
 <div className={styles.test}>
             <svg version="1.1"
