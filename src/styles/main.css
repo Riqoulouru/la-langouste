@@ -75,7 +75,6 @@ body {
 .Santa{
     z-index: 1;
     width: 100vw;
-    height: 100vw!important;
     position: absolute;
     top: 0;
     left: 0;

@@ -175,7 +175,7 @@ const HomePage = () => {
                     </DialogActions>
                 </Dialog>
 
-                <EcoPage></EcoPage>
+                {/*<EcoPage></EcoPage>*/}
 
             </div>
         </div>
