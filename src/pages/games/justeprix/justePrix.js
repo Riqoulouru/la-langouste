@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../../styles/JustePrixPage.module.css';
-import jsonJustePrix from '@/data/justeprix.json';
+import jsonJustePrix from '@/data/jsonJustePrix.json';
 
 const JustePrixPage = ({onGameFinish,id}) => {
   const router = useRouter();
