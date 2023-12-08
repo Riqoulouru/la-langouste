@@ -60,11 +60,13 @@ body {
     display: flex;
     padding: 10px;
     font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
 }
 
 .help-button {
     width: fit-content;
-    margin-left: 5px;
+
     background-color: #89a8ce;
     border: 2px solid #422800;
     border-radius: 5px;
@@ -83,6 +85,10 @@ body {
     touch-action: manipulation;
 }
 
+.margin-5 {
+    margin: 5px !important;
+}
+
 .help-button:hover {
     background-color: #fff;
 }
@@ -96,4 +102,12 @@ body {
     display: flex;
     padding: 10px;
     font-size: 1.2em;
+}
+
+.iceberg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }

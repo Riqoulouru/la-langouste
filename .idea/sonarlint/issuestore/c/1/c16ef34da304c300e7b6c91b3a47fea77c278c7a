@@ -1,5 +1,4 @@
 
-Ljavascript:S1128"$Remove this unused import of 'Link'.(ÿÐÍ¸ÿÿÿÿÿ8Šðœ¼Ä1
-Njavascript:S1128"&Remove this unused import of 'styles'.(áŒ¦Øûÿÿÿÿ8‹ðœ¼Ä1
-hjavascript:S1481"@Remove the declaration of the unused 'setSideBarWidth' variable.(ˆÚ–ãýÿÿÿÿ8‹ðœ¼Ä1
-ejavascript:S1854"=Remove this useless assignment to variable "setSideBarWidth".(ˆÚ–ãýÿÿÿÿ8‹ðœ¼Ä1
+hjavascript:S1481"@Remove the declaration of the unused 'setSideBarWidth' variable.(ˆÚ–ãýÿÿÿÿ8—èû¼Ä1
+ejavascript:S1854"=Remove this useless assignment to variable "setSideBarWidth".(ˆÚ–ãýÿÿÿÿ8›èû¼Ä1
+\javascript:S1854r"9Remove this useless assignment to variable "currentGame".(ëŸ½Õ8œèû¼Ä1

@@ -6,9 +6,6 @@ import Qcm from "@/pages/games/vraifaux/qcm";
 import IcebergComponent from '@/components/IcebergComponent/IcebergComponent';
 import ExplainationOne from "@/pages/explainations/level_one/index";
 import ExplainationTwo from "@/pages/explainations/level_two/index";
-import ExplainationThree from "@/pages/explainations/level_three/index";
-import ExplainationFour from "@/pages/explainations/level_four/index";
-import ExplainationFive from "@/pages/explainations/level_five/index";
 import styles from "@/styles/Game.module.scss";
 const GamesPage = () => {
     const [selectedLevel, setSelectedLevel] = useState(0);
