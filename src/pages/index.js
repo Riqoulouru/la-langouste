@@ -136,7 +136,8 @@ const HomePage = () => {
 
     return (
         <div className={"main-content"}>
-            <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} />
+
+            <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} setSideBarWidth={setSideBarWidth} setIcebergWidth={setIcebergWidth}/>
             <div></div>
 <div className={styles.test}>
             <svg version="1.1"
@@ -381,6 +382,8 @@ const HomePage = () => {
 
                             Le but du jeu est d’accéder à tous les niveaux de l’iceberg pour en apprendre de plus en plus sur le changement climatique et tous les aspects gravitant autour de cette notion.
                             Pour ce faire, vous devrez avancer dans les différents niveaux, en répondant à des questions qui seront de plus en plus dures, mais attention ! Si vous répondez trop souvent de la mauvaise manière, l’iceberg fondra plus rapidement. A l’inverse, si vous répondez correctement, vous permettrez à l’iceberg de résister plus longtemps aux effets du réchauffement climatique.
+                            <br/>
+                            Si vous vous intéressez au changement climatique, ne vous inquiété pas ! Vous pouvez lire les explications sans avoir d'impact sur la fonte de l'iceberg.
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
