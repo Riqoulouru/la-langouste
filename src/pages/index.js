@@ -1,9 +1,21 @@
+
+// pages/index.js
+import React from 'react';
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Konami from 'react-konami-code';
 import styles from "@/styles/Home.module.scss"
-export default function Page() {
-    const [easterEggActivated, setEasterEggActivated] = useState(false);
+
+const HomePage = () => {
+  const { t, i18n } = useTranslation('translation');
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+  
+      const [easterEggActivated, setEasterEggActivated] = useState(false);
 
     const easterEgg = () => {
         alert('Hey, you typed the Konami Code!');
@@ -19,11 +31,24 @@ export default function Page() {
         return () => clearTimeout(resetTimeout);
     }, [easterEggActivated]);
 
-    return (
-        <div className={styles.test}>
-            <Link href={"/games/Game"}>GO</Link>
-            {/* Utilise Konami component uniquement si l'easter egg n'est pas encore activé */}
+  return (
+    <div>
+      <h1>{t('welcome')}</h1>
+      <p>{t('hello')}</p>
+
+      {/* Changer la langue avec des boutons */}
+      <div className={styles.test}>
+        <button onClick={() => changeLanguage('fr')}>Français</button>
+        <button onClick={() => changeLanguage('en')}>English</button>
+        <Link href={"/games/Game"}>GO</Link>
             {!easterEggActivated && <Konami action={easterEgg} />}
-        </div>
+      </div>
+
+      <div>
+        <Link href="/games/justeprix/1">
+          {t('justePrix')}
+        </Link>
+      </div>
+
     );
 }
