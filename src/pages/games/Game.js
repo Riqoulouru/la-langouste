@@ -3,15 +3,25 @@ import jsonGame from '../../data/allGame.json';
 import JustePrix from "@/pages/games/justeprix/justePrix";
 import Famille from "@/pages/games/top10/famille";
 import Qcm from "@/pages/games/vraifaux/qcm";
+import IcebergComponent from '@/components/IcebergComponent/IcebergComponent';
 
+import styles from "@/styles/Game.module.scss";
 const GamesPage = () => {
     const [selectedLevel, setSelectedLevel] = useState(0);
     const [currentGameIndex, setCurrentGameIndex] = useState(1);
     const [gamesRemaining, setGamesRemaining] = useState(0);
     const [gameFinished, setGameFinished] = useState(false);
-    const [timeRemaining, setTimeRemaining] = useState(300); // Temps initial en secondes
+    const [timeRemaining, setTimeRemaining] = useState(20); // Temps initial en secondes
+    const [temperature, setTemperature] = useState(0);
 
 
+    const handleIncrease = () => {
+        setTemperature((prevTemperature) => prevTemperature + 1);
+    };
+
+    const handleDecrease = () => {
+        setTemperature((prevTemperature) => prevTemperature - 1);
+    };
 
     const handleLevelChange = (level) => {
         setSelectedLevel(level);
@@ -28,9 +38,9 @@ const GamesPage = () => {
         setGamesRemaining((prevRemaining) => prevRemaining - 1);
 
         if (isCorrectAnswer) {
-            setTimeRemaining((prevTime) => prevTime + 100); // Ajouter 10 secondes pour une bonne réponse
+            setTimeRemaining((prevTime) => prevTime + 10); // Ajouter 10 secondes pour une bonne réponse
         } else {
-            setTimeRemaining((prevTime) => Math.max(prevTime - 100, 0)); // Retirer 5 secondes pour une mauvaise réponse (minimum 0)
+            setTimeRemaining((prevTime) => Math.max(prevTime - 10, 0)); // Retirer 5 secondes pour une mauvaise réponse (minimum 0)
         }
 
         if (gamesRemaining === 1) {
@@ -50,7 +60,8 @@ const GamesPage = () => {
         } else {
             //incrémenter temperature
             //rmettre à 0 le temps
-            setTimeRemaining(300)
+            handleIncrease();
+            setTimeRemaining(20)
         }
     }, [timeRemaining, gameFinished]);
 
@@ -67,10 +78,9 @@ const GamesPage = () => {
                     </button>
                 ))}
             </div>
-            {gameFinished ? (
-                <p>Bravo, vous avez terminé tous les jeux de ce niveau !</p>
-            ) : (
+
                 <div>
+                    <button onClick={handleIncrease}>Augmenter la température</button>
                     <p>Temps restant : {timeRemaining} secondes</p>
                     {currentGame && (
                         <>
@@ -85,8 +95,11 @@ const GamesPage = () => {
                             )}
                         </>
                     )}
+                    <div className={styles.iceBerg}>
+                        <IcebergComponent temperature={temperature}/>
+                    </div>
                 </div>
-            )}
+
         </div>
     );
 };

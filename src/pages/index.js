@@ -1,4 +1,6 @@
 
+import IcebergComponent from '../components/IcebergComponent/IcebergComponent'; // Assurez-vous que le chemin est correct
+import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';
 import EasterEggModal from '../components/EasterEggModal'; // Assure-toi d'ajuster le chemin d'accès
 
@@ -46,6 +48,7 @@ const HomePage = () => {
 
     return (
         <div>
+      <IcebergComponent />
             <h1>{t('welcome')}</h1>
             <p>{t('hello')}</p>
 
@@ -69,3 +72,4 @@ const HomePage = () => {
 }
 
 export default HomePage;
+
