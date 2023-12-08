@@ -14,7 +14,7 @@ const HomePage = () => {
     const [easterEggActivated, setEasterEggActivated] = useState(false);
 
     const easterEgg = () => {
-        alert('Hey, you typed the Konami Code!');
+        alert(t('konami'));
         setEasterEggActivated(true);
     }
 
@@ -34,8 +34,9 @@ const HomePage = () => {
 
             {/* Changer la langue avec des boutons */}
             <div className={styles.test}>
-                <button onClick={() => changeLanguage('fr')}>Français</button>
-                <button onClick={() => changeLanguage('en')}>English</button>
+                <button onClick={() => changeLanguage('fr')}>Français 🇫🇷</button>
+                <button onClick={() => changeLanguage('en')}>English 🇬🇧/🇺🇸</button>
+                <button onClick={() => changeLanguage('ch')}>中文  🇨🇳</button>
                 <br/>
                 <Link href={"/games/Game"}>GO</Link>
                 {!easterEggActivated && <Konami action={easterEgg} />}

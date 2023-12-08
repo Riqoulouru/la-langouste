@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "question": "What are the vehicles that consume the most fuel?",
+    "reponses": [
+      "airplane",
+      "car",
+      "boat"
+    ],
+    "propositions": [
+      "car",
+      "motorcycle",
+      "bicycle",
+      "bus",
+      "train",
+      "tram",
+      "truck",
+      "off-road vehicle (ATV)",
+      "scooter",
+      "skateboard",
+      "airplane",
+      "helicopter",
+      "hot air balloon",
+      "glider",
+      "drone",
+      "boat",
+      "ship",
+      "ocean liner",
+      "yacht",
+      "sailboat",
+      "ferry",
+      "submarine",
+      "cable car",
+      "gondola",
+      "funicular",
+      "segway"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Rank the sources of carbon dioxide (CO2) emissions from highest to lowest.",
+    "reponses": [
+      "Combustion of fossil fuels",
+      "Deforestation",
+      "Industrial waste"
+    ],
+    "propositions": [
+      "car",
+      "motorcycle",
+      "bicycle",
+      "bus",
+      "train",
+      "tram",
+      "truck",
+      "off-road vehicle (ATV)",
+      "scooter",
+      "skateboard",
+      "airplane",
+      "helicopter",
+      "hot air balloon",
+      "glider",
+      "drone",
+      "boat",
+      "ship",
+      "ocean liner",
+      "yacht",
+      "sailboat",
+      "ferry",
+      "submarine",
+      "cable car",
+      "gondola",
+      "funicular",
+      "segway"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Which modes of transportation are considered more environmentally friendly?",
+    "reponses": [
+      "Bicycle",
+      "Carpooling",
+      "Individual car"
+    ],
+    "propositions": [
+      "car",
+      "motorcycle",
+      "bicycle",
+      "bus",
+      "train",
+      "tram",
+      "truck",
+      "off-road vehicle (ATV)",
+      "scooter",
+      "skateboard",
+      "airplane",
+      "helicopter",
+      "hot air balloon",
+      "glider",
+      "drone",
+      "boat",
+      "ship",
+      "ocean liner",
+      "yacht",
+      "sailboat",
+      "ferry",
+      "submarine",
+      "cable car",
+      "gondola",
+      "funicular",
+      "segway"
+    ]
+  }
+]
