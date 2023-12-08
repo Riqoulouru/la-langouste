@@ -180,6 +180,8 @@ const HomePage = () => {
                     </DialogActions>
                 </Dialog>
 
+                <EcoPage></EcoPage>
+
             </div>
         </div>
 

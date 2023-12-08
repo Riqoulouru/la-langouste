@@ -1,15 +1,16 @@
 // pages/ecopage.js
 import React from 'react';
+import styles from '../../styles/EcoPage.module.css'; // Importe le fichier de styles CSS
 
 const EcoPage = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Éco-Conception de Notre Projet</h1>
       <p>
         Bienvenue sur la page dédiée à l'éco-conception de notre projet. Nous sommes fiers de partager
         des informations sur la durabilité de notre site web.
       </p>
-      <section>
+      <section className={styles.infoSection}>
         <h2>Informations Éco-Conception</h2>
         <p>
           La taille totale de cette page est de 171 Ko, avec seulement 8 protocoles HTTPS utilisés. En termes
