@@ -8,6 +8,7 @@ import Konami from 'react-konami-code';
 import styles from "@/styles/Home.module.scss"
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
 import jsonGame from "@/data/jsonSommaire.json";
+import EcoPage from './explainations/ecoconception';
 
 
 
