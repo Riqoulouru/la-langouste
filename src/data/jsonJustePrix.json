@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle est la position de la France dans le classement des plus gros pollueurs ?",
+    "reponse": "21"
+  },
+  {
+    "id": 2,
+    "question": "Si nous continuons avec notre mode de vie actuel, de combien de degrés augmentera la température globale d'ici la fin du siècle (en °C) ?",
+    "reponse": "3,2"
+  },
+  {
+    "id": 3,
+    "question": "De combien de centimètres s’est élevé le niveau de la mer entre 1901 et 2018 dû au réchauffement climatique ?",
+    "reponse": "20"
+  },
+  {
+    "id": 4,
+    "question": "A combien s'élève le coût total des aménagements permettant d'être irréprochables en terme de limitation du réchauffement climatique par an (en milliards de dollars) ?",
+    "reponse": "100"
+  },
+  {
+    "id": 5,
+    "question": "De combien de degrés la température de la Terre a-t-elle augmenté entre les périodes 1850-1900 et 2010-2020 (en °C) ?",
+    "reponse": "1,09"
+  },
+  {
+    "id": 6,
+    "question": "Quel est le pourcentage représenté par le CO2 dans l’atmosphère ?",
+    "reponse": "0.04"
+  }
+]

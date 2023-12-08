@@ -1,4 +1,4 @@
-import questionsData from '../../../data/questions.json';
+import jsonFamille from '@/data/jsonFamille.json';
 import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 
@@ -16,7 +16,7 @@ const GamePage = ({onGameFinish,id }) => {
         // Recherche de la question dans le JSON en fonction de l'ID
 
         if (id) {
-            const question = questionsData.find(question => question.id === parseInt(id));
+            const question = jsonFamille.find(question => question.id === parseInt(id));
             setCurrentQuestion(question);
             setFoundAnswers(Array(question.reponses.length).fill(''));
             setChancesLeft(3);
@@ -27,7 +27,11 @@ const GamePage = ({onGameFinish,id }) => {
     useEffect(() => {
         if (processingAnswer) {
             // Vérification de fin de jeu après mise à jour des réponses trouvées
-            if (chancesLeft === 0 || foundAnswers.every(answer => answer !== '')) {
+            if (chancesLeft === 0 ) {
+                onGameFinish(false);
+                setUserInput('');
+                setFeedback('');
+            } else if (foundAnswers.every(answer => answer !== '')) {
                 onGameFinish(true);
                 setUserInput('');
                 setFeedback('');
