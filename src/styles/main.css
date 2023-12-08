@@ -22,6 +22,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     width: fit-content;
+    z-index: 2;
 }
 
 .language-button {
@@ -62,6 +63,15 @@ body {
     font-size: 1.2em;
     justify-content: center;
     align-items: center;
+}
+
+.Santa{
+    z-index: 1;
+    width: 100vw;
+    height: 100vw!important;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .help-button {
@@ -110,4 +120,5 @@ body {
     align-items: center;
     height: 100vh;
     transition: width ease-in-out .35s;
+    background-color: aqua;
 }
