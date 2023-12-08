@@ -31,7 +31,8 @@ const HomePage = () => {
     const [gameFinished, setGameFinished] = useState(false);
     const [timeRemaining, setTimeRemaining] = useState(20); // Temps initial en secondes
     const [timerStarted, setTimerStarted] = useState(false);
-
+    const [gamePossible, setGamePossible] = useState(1);
+    const [errorMessage, setErrorMessage] = useState('');
     const easterEgg = () => {
         alert(t('konami'));
         setEasterEggActivated(true);
@@ -68,12 +69,19 @@ const HomePage = () => {
     }
 
     const handleLevelChange = (level) => {
+
+        if (level !== gamePossible) {
+            setErrorMessage("Vous n'avez pas encore débloqué ce niveau")
+            return;
+        }
+        setErrorMessage("")
         setSideBarWidth("60vw")
         setIcebergWidth("40vw")
         setTimerStarted(true);
         setSelectedLevel(level);
         setCurrentGameIndex(1);
         setGameFinished(false);
+        setGamePossible(gamePossible + 1);
 
         // Calcul du nombre total de jeux pour le niveau sélectionné
         const totalGames = jsonGame.find((game) => game.level === level)?.games;
@@ -122,7 +130,12 @@ const HomePage = () => {
 
             <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} setSideBarWidth={setSideBarWidth} setIcebergWidth={setIcebergWidth}/>
 
+
+            <div className={"errorText"}>
+                {errorMessage}
+            </div>
             <div className={"iceberg"} style={{width: icebergWidth}}>
+
                 <IcebergComponent temperature={temperature} handleLevelChange={handleLevelChange}/>
             </div>
 

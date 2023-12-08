@@ -127,7 +127,14 @@ body {
     align-items: center;
     height: 100vh;
     transition: width ease-in-out .35s;
-    background-color: aqua;
+  background-color: aqua;
+
+}
+
+.errorText {
+    color: red;
+
+    
 }
 
 .game-row {
@@ -160,4 +167,5 @@ body {
 
 .spacer-bottom-5 {
     margin-bottom: 5vh;
+
 }

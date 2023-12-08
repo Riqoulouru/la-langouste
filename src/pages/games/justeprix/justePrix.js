@@ -2,11 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../../styles/JustePrixPage.module.css';
+import jsonJustePrix from '@/data/jsonJustePrix.json';
 import jsonJustePrixEn from '@/data/jsonJustePrixEn.json';
-import jsonJustePrix from '@/data/justeprix.json';
 import jsonJustePrixCh from '@/data/jsonJustePrixCh.json';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
+
 
 const JustePrixPage = ({ onGameFinish, id }) => {
   const { t, i18n } = useTranslation('translation');
