@@ -27,8 +27,6 @@ const QuestionPage = ({onGameFinish, id}) => {
 
         if (selectedAnswer) {
             const selectedLabel = selectedAnswer.value;
-            console.log(data.questions)
-            console.log(question)
             const correctAnswer = question.reponses.find(
                 (reponse) => reponse.result === true
             );
@@ -38,6 +36,7 @@ const QuestionPage = ({onGameFinish, id}) => {
             } else {
                 setIsAnswerCorrect(false);
             }
+            onGameFinish(true);
         }
     };
 
