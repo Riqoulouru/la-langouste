@@ -1,0 +1,113 @@
+
+body {
+    margin: 0;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    color: #2d2d2d;
+}
+
+.main-content {
+    display: flex !important;
+}
+
+.side-bar {
+    background-color: black;
+    height: 100vh;
+    transition: width ease-in-out .35s;
+}
+
+.language-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: fit-content;
+}
+
+.language-button {
+    width: fit-content;
+    min-width: 2vw;
+    margin-left: 5px;
+
+    background-color: #89a8ce;
+    border: 2px solid #422800;
+    border-radius: 5px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 12px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.language-button:hover {
+    background-color: #fff;
+}
+
+.language-button:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+.temperature-container {
+    display: flex;
+    padding: 10px;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.help-button {
+    width: fit-content;
+    margin-left: 5px;
+    background-color: #89a8ce;
+    border: 2px solid #422800;
+    border-radius: 5px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 12px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.margin-5 {
+    margin: 5px !important;
+}
+
+.help-button:hover {
+    background-color: #fff;
+}
+
+.help-button:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+.temperature-container {
+    display: flex;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.iceberg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: width ease-in-out .35s;
+}

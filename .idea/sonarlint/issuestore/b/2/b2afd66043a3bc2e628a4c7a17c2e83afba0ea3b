@@ -1,0 +1,5 @@
+
+[javascript:S1481"?Remove the declaration of the unused 'handleDecrease' variable.(ÜúÒã
+Xjavascript:S1854"<Remove this useless assignment to variable "handleDecrease".(ÜúÒã
+ejavascript:S3358i"DExtract this nested ternary operation into an independent statement.(¼ş™Êøÿÿÿÿ
+ejavascript:S3358k"DExtract this nested ternary operation into an independent statement.(¨•†ºúÿÿÿÿ
