@@ -1,10 +1,21 @@
-// Page.js
+
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Konami from 'react-konami-code';
 import EasterEggModal from '../components/EasterEggModal'; // Assure-toi d'ajuster le chemin d'accès
 
-export default function Page() {
+import { useTranslation } from 'react-i18next';
+
+import Link from 'next/link';
+import Konami from 'react-konami-code';
+import styles from "@/styles/Home.module.scss"
+
+const HomePage = () => {
+    const { t, i18n } = useTranslation('translation');
+
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    };
+
+
     const [easterEggActivated, setEasterEggActivated] = useState(false);
 
     const easterEgg = () => {
@@ -26,12 +37,21 @@ export default function Page() {
 
     return (
         <div>
-            <Link href={"/games/Game"}>GO</Link>
-            {/* Utilise Konami component uniquement si l'easter egg n'est pas encore activé */}
-            {!easterEggActivated && <Konami action={easterEgg} />}
+            <h1>{t('welcome')}</h1>
+            <p>{t('hello')}</p>
 
-            {/* Utilise le composant modal si l'easter egg est activé */}
-            {easterEggActivated && <EasterEggModal isOpen={easterEggActivated} onRequestClose={closeModal} />}
+            {/* Changer la langue avec des boutons */}
+            <div className={styles.test}>
+                <button onClick={() => changeLanguage('fr')}>Français</button>
+                <button onClick={() => changeLanguage('en')}>English</button>
+                <br/>
+                <Link href={"/games/Game"}>GO</Link>
+                {!easterEggActivated && <Konami action={easterEgg} />}
+            </div>
+
         </div>
+
     );
 }
+
+export default HomePage;
