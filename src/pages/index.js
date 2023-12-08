@@ -10,6 +10,7 @@ import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} fr
 import Santa from "@/components/Santa";
 import jsonGame from "@/data/jsonSommaire.json";
 import EcoPage from './explainations/ecoconception';
+import Link from "next/link";
 
 
 
@@ -142,6 +143,7 @@ const HomePage = () => {
             <div>
 
                 <div className={"language-container"}>
+                    <Link href={"/explainations/ecoconception"} className={"language-button"}> Eco conception </Link>
                     <button className={"language-button"} onClick={() => changeLanguage('fr')}>Français 🇫🇷</button>
                     <button className={"language-button"} onClick={() => changeLanguage('en')}>English 🇬🇧/🇺🇸</button>
                     <button className={"language-button"} onClick={() => changeLanguage('ch')}>中文 🇨🇳</button>
