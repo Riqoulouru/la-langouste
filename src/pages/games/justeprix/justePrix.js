@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../../styles/JustePrixPage.module.css';
-import questionsData from '../../../data/justeprix.json';
+import jsonJustePrix from '@/data/justeprix.json';
 
 const JustePrixPage = ({onGameFinish,id}) => {
   const router = useRouter();
@@ -13,7 +13,7 @@ const JustePrixPage = ({onGameFinish,id}) => {
   useEffect(() => {
     // Fetch the question based on the ID from the URL or a parameter
 
-    const selectedQuestion = questionsData.find((question) => question.id === parseInt(id, 10));
+    const selectedQuestion = jsonJustePrix.find((question) => question.id === parseInt(id, 10));
 
     if (selectedQuestion) {
       setCurrentQuestion(selectedQuestion);
