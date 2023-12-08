@@ -18,8 +18,6 @@ const QuestionPage = ({onGameFinish, id}) => {
         // Récupère la question correspondante
       // Select the appropriate JSON based on the language
   let jsonQuestions;
-  console.log("QCM")
-  console.log(i18n.language)
   switch (i18n.language) {
     case 'en':
       jsonQuestions = jsonQCMEn;
