@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "What is France's rank in the list of the largest polluters?",
+    "answer": "21"
+  },
+  {
+    "id": 2,
+    "question": "If we continue with our current lifestyle, by how many degrees will the global temperature increase by the end of the century (in °C)?",
+    "answer": "3.2"
+  },
+  {
+    "id": 3,
+    "question": "By how many centimeters has the sea level risen between 1901 and 2018 due to global warming?",
+    "answer": "20"
+  },
+  {
+    "id": 4,
+    "question": "What is the total cost of adjustments to be climate-friendly per year (in billion dollars)?",
+    "answer": "100"
+  },
+  {
+    "id": 5,
+    "question": "By how many degrees has the Earth's temperature increased between the periods 1850-1900 and 2010-2020 (in °C)?",
+    "answer": "1.09"
+  },
+  {
+    "id": 6,
+    "question": "What percentage does CO2 represent in the atmosphere?",
+    "answer": "0.04"
+  }
+]

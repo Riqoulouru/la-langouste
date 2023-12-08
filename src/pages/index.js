@@ -5,8 +5,11 @@ import React, { useState, useEffect } from 'react';
 import EasterEggModal from '../components/EasterEggModal';
 import SideBar from '../components/SideBar';
 import Konami from 'react-konami-code';
+import styles from "@/styles/Home.module.scss"
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
+import Santa from "@/components/Santa";
 import jsonGame from "@/data/jsonSommaire.json";
+import EcoPage from './explainations/ecoconception';
 
 
 
@@ -16,7 +19,6 @@ const HomePage = () => {
     const changeLanguage = (lang) => {
         i18n.changeLanguage(lang);
     };
-
 
     const [easterEggActivated, setEasterEggActivated] = useState(false);
     const [helpDisplayed, setHelpDisplayed] = useState(false);
@@ -125,8 +127,8 @@ const HomePage = () => {
 
     return (
         <div className={"main-content"}>
-            <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} />
-            <div></div>
+
+            <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} setSideBarWidth={setSideBarWidth} setIcebergWidth={setIcebergWidth}/>
 
 
             <div className={"errorText"}>
@@ -164,12 +166,16 @@ const HomePage = () => {
 
                             Le but du jeu est d’accéder à tous les niveaux de l’iceberg pour en apprendre de plus en plus sur le changement climatique et tous les aspects gravitant autour de cette notion.
                             Pour ce faire, vous devrez avancer dans les différents niveaux, en répondant à des questions qui seront de plus en plus dures, mais attention ! Si vous répondez trop souvent de la mauvaise manière, l’iceberg fondra plus rapidement. A l’inverse, si vous répondez correctement, vous permettrez à l’iceberg de résister plus longtemps aux effets du réchauffement climatique.
+                            <br/>
+                            Si vous vous intéressez au changement climatique, ne vous inquiété pas ! Vous pouvez lire les explications sans avoir d'impact sur la fonte de l'iceberg.
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
                         <button className={"language-button margin-5"} onClick={() => setHelpDisplayed(false)}>Fermer</button>
                     </DialogActions>
                 </Dialog>
+
+                <EcoPage></EcoPage>
 
             </div>
         </div>

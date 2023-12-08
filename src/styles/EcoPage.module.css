@@ -1,0 +1,15 @@
+/* styles/EcoPage.module.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .infoSection {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Ajoutez d'autres styles selon vos préférences */
+  

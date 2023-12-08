@@ -1,6 +1,13 @@
 {
-    "welcome": "欢迎",
-    "hello": "你好",
-    "konami": "嘿，你启动了Konami代码。"
-  }
-  
+  "welcome": "欢迎",
+  "hello": "你好",
+  "konami": "嘿，你启用了Konami代码。",
+  "congratulations": "恭喜！答案是正确的。",
+  "incorrecthigher": "抱歉，答案不正确。太高了。请再试一次。",
+  "incorrectlower": "抱歉，答案不正确。太低了。请再试一次。",
+  "incorrectnumber": "抱歉，数字不正确。请再试一次。",
+  "rightpricename": "正确的价格",
+  "estimate": "输入你的估计",
+  "submit": "提交",
+  "questionnotloaded": "无法加载问题"
+}
