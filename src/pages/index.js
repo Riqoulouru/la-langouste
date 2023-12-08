@@ -1,5 +1,9 @@
-import { useTranslation } from 'react-i18next';
+
 import React, { useState, useEffect } from 'react';
+import EasterEggModal from '../components/EasterEggModal'; // Assure-toi d'ajuster le chemin d'accès
+
+import { useTranslation } from 'react-i18next';
+
 import Link from 'next/link';
 import Konami from 'react-konami-code';
 import styles from "@/styles/Home.module.scss"
@@ -11,11 +15,15 @@ const HomePage = () => {
         i18n.changeLanguage(lang);
     };
 
+
     const [easterEggActivated, setEasterEggActivated] = useState(false);
 
     const easterEgg = () => {
-        alert('Hey, you typed the Konami Code!');
         setEasterEggActivated(true);
+    }
+
+    const closeModal = () => {
+        setEasterEggActivated(false);
     }
 
     useEffect(() => {
@@ -40,6 +48,7 @@ const HomePage = () => {
                 <Link href={"/games/Game"}>GO</Link>
                 {!easterEggActivated && <Konami action={easterEgg} />}
             </div>
+
         </div>
 
     );
