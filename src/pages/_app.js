@@ -1,5 +1,6 @@
 
 import '/src/styles/explanations/main.css';
+import '/src/styles/main.css';
 
 // pages/_app.js
 import React from 'react';

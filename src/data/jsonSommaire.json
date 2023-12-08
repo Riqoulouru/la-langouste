@@ -1,0 +1,91 @@
+[
+  {
+    "level": 1,
+    "games": {
+      "1": {
+        "id": 1,
+        "name": "qcm"
+      },
+      "2": {
+        "id": 1,
+        "name": "Famille"
+      },
+      "3": {
+        "id": 2,
+        "name": "qcm"
+      }
+    }
+  },
+  {
+    "level": 2,
+    "games": {
+      "1": {
+        "id": 1,
+        "name": "JustePrix"
+      },
+      "2": {
+        "id": 3,
+        "name": "qcm"
+      },
+      "3": {
+        "id": 4,
+        "name": "qcm"
+      },
+      "4": {
+        "id": 2,
+        "name": "Famille"
+      }
+    }
+  },
+  {
+    "level": 3,
+    "games": {
+      "1": {
+        "id": 3,
+        "name": "Famille"
+      },
+      "2": {
+        "id": 2,
+        "name": "JustePrix"
+      },
+      "3": {
+        "id": 3,
+        "name": "JustePrix"
+      }
+    }
+  },
+  {
+    "level": 4,
+    "games": {
+      "1": {
+        "id": 5,
+        "name": "qcm"
+      },
+      "2": {
+        "id": 4,
+        "name": "JustePrix"
+      },
+      "3": {
+        "id": 6,
+        "name": "qcm"
+      }
+    }
+  },
+  {
+    "level": 5,
+    "games": {
+      "1": {
+        "id": 5,
+        "name": "JustePrix"
+      },
+      "2": {
+        "id": 6,
+        "name": "JustePrix"
+      },
+      "3": {
+        "id": 4,
+        "name": "Famille"
+      }
+    }
+  }
+]
