@@ -65,3 +65,9 @@ K
 src/styles/Home.module.scss,1/7/172c5b5e900c588145b5c277c3c89bfa45564f92
 S
 #src/styles/JustePrixPage.module.css,c/e/cec365322e8666476fd1c6c7cb710d6254ced127
+N
+src/styles/iceberg-polygon.css,8/d/8d919125dd7ba9882f59bf595f19e2f9ccdb5390
+O
+src/pages/games/vraifaux/qcm.js,6/b/6b9074a2a80d80dcdfc124c99a214b8ee6a4d675
+V
+&src/pages/games/justeprix/justePrix.js,4/b/4bb431b8de5861069becb37d67ec207f05c143ef

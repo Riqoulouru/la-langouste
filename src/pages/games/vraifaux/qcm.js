@@ -68,16 +68,16 @@ const QuestionPage = ({onGameFinish, id}) => {
     return (
         <div>
             <div>
-                <p>{question.question}</p>
+                <h1 className={"title spacer-bottom-5"}>{question.question}</h1>
                 {question.reponses.map((reponse, index) => (
-                    <div key={index}>
+                    <div key={index} className={"center"}>
                         <input type="radio" id={`reponse-${index}`} name="reponse" value={reponse.label}/>
                         <label htmlFor={`reponse-${index}`}>{reponse.label}</label>
                     </div>
                 ))}
             </div>
-            <div>
-                <button onClick={checkAnswer}>Valider</button>
+            <div className={"center spacer-4"}>
+                <button className={"language-button"} onClick={checkAnswer}>Valider</button>
 
                 {isAnswerCorrect === false && (
                     <p style={{color: 'red'}}>La réponse est incorrecte.</p>

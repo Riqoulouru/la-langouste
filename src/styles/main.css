@@ -126,7 +126,7 @@ body {
     align-items: center;
     height: 100vh;
     transition: width ease-in-out .35s;
-  background-color: aqua;
+    background-color: #dadfef;
 
 }
 
@@ -167,4 +167,12 @@ body {
 .spacer-bottom-5 {
     margin-bottom: 5vh;
 
+}
+
+.prix-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px;
 }
