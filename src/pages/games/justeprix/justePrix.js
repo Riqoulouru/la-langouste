@@ -54,23 +54,13 @@ const JustePrixPage = ({ onGameFinish, id }) => {
     const userAnswer = parseInt(userInput, 10);
     const correctAnswer = parseInt(currentQuestion.reponse, 10);
 
-    function waitForUserAction() {
-      return new Promise((resolve) => {
-        // Ici, vous pouvez utiliser un événement ou une interaction utilisateur
-        // Par exemple, attacher un événement à un bouton pour résoudre la promesse lorsqu'il est cliqué
-        document.getElementById('yourButton').addEventListener('click', () => {
-          resolve('Action utilisateur terminée !');
-        });
-      });
-    }
+
+
 
     if (!isNaN(userAnswer)) {
       if (userAnswer === correctAnswer) {
         setMessage(t('congratulations'));
         setContinueButtonShow(true)
-        const result = await waitForUserAction();
-        setContinueButtonShow(false)
-        onGameFinish(true);
       } else if (userAnswer < correctAnswer) {
         setMessage(t('incorrecthigher'));
       } else {
@@ -81,6 +71,11 @@ const JustePrixPage = ({ onGameFinish, id }) => {
       setMessage(t('incorrectnumber'));
     }
   };
+
+  function continueButton() {
+    setContinueButtonShow(false)
+    onGameFinish(true);
+  }
 
   return (
 
@@ -104,6 +99,7 @@ const JustePrixPage = ({ onGameFinish, id }) => {
                     {t('submit')}
                   </button>
                 </form>
+                {continueButtonShow && <button id="continueButton" className={"language-button"} onClick={continueButton}>{t('continue')}</button>}
               </div>
           ) : (
               <p>t('questionnotloaded')</p>

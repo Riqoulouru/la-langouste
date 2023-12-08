@@ -131,10 +131,6 @@ const HomePage = () => {
             <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} setSideBarWidth={setSideBarWidth} setIcebergWidth={setIcebergWidth}/>
 
 
-            {
-                alertShown ? <Alert severity="error">{errorMessage}</Alert>
-                : <div></div>
-            }
             <div className={"iceberg"} style={{width: icebergWidth}}>
 
             <IcebergComponent temperature={temperature} handleLevelChange={handleLevelChange}/>
