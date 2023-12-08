@@ -1,0 +1,47 @@
+
+.level {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    color: #2d2d2d;
+}
+
+.level-container {
+    padding: 10px 50px;
+}
+
+.title {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.spacer-4 {
+    margin-top: 4vh;
+}
+
+.spacer-2 {
+    margin-top: 2vh;
+}
+
+.spacer-1 {
+    margin-top: 1vh;
+}
+
+.div-explanation-content {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.img-level-one {
+    width: 60vw;
+    height: auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.opacity-low {
+    opacity: 0.5;
+}
