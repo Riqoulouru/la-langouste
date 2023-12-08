@@ -17,8 +17,8 @@ body {
 
 .language-container {
     position: absolute;
-    right: 10px;
     top: 10px;
+    right: 10px;
     display: flex;
     justify-content: space-evenly;
     width: fit-content;
@@ -66,7 +66,7 @@ body {
 
 .help-button {
     width: fit-content;
-
+    margin-left: 5px;
     background-color: #89a8ce;
     border: 2px solid #422800;
     border-radius: 5px;
@@ -108,6 +108,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100vh;
+    transition: width ease-in-out .35s;
 }

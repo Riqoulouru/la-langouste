@@ -61,3 +61,7 @@ I
 src/data/jsonFamille.json,f/7/f7ba0ae459bb640b1d6e33946f12f2e88adf5718
 E
 src/data/allGame.json,7/3/732b7b5b4863c57dfb2f0fb67146fb07d0ee932f
+K
+src/styles/Home.module.scss,1/7/172c5b5e900c588145b5c277c3c89bfa45564f92
+S
+#src/styles/JustePrixPage.module.css,c/e/cec365322e8666476fd1c6c7cb710d6254ced127

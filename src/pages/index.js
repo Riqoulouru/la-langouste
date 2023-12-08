@@ -21,6 +21,7 @@ const HomePage = () => {
     const [easterEggActivated, setEasterEggActivated] = useState(false);
     const [helpDisplayed, setHelpDisplayed] = useState(false);
     const [sideBarWidth, setSideBarWidth] = useState('0');
+    const [icebergWidth, setIcebergWidth] = useState('100vw');
     const [temperature, setTemperature] = useState(0);
     const [selectedLevel, setSelectedLevel] = useState(0);
     const [currentGameIndex, setCurrentGameIndex] = useState(1);
@@ -65,7 +66,8 @@ const HomePage = () => {
     }
 
     const handleLevelChange = (level) => {
-        console.log(level)
+        setSideBarWidth("60vw")
+        setIcebergWidth("40vw")
         setTimerStarted(true);
         setSelectedLevel(level);
         setCurrentGameIndex(1);
@@ -118,7 +120,7 @@ const HomePage = () => {
             <SideBar gameFinished={gameFinished} currentGame={currentGameIndex} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} />
             <div></div>
 
-            <div className={"iceberg"}>
+            <div className={"iceberg"} style={{width: icebergWidth}}>
                 <IcebergComponent temperature={temperature} handleLevelChange={handleLevelChange}/>
             </div>
 
@@ -141,11 +143,14 @@ const HomePage = () => {
                     aria-describedby="alert-dialog-description"
                 >
                     <DialogTitle id="alert-dialog-title">
-                        {"Quelques info à pour jouer !"}
+                        {"Bienvenue sur le site de la Langouste climatique !"}
                     </DialogTitle>
                     <DialogContent>
                         <DialogContentText id="alert-dialog-description">
-                            sususususus
+                            Sur ce site, vous aurez la possibilité d’apprendre, tout en vous amusant.
+
+                            Le but du jeu est d’accéder à tous les niveaux de l’iceberg pour en apprendre de plus en plus sur le changement climatique et tous les aspects gravitant autour de cette notion.
+                            Pour ce faire, vous devrez avancer dans les différents niveaux, en répondant à des questions qui seront de plus en plus dures, mais attention ! Si vous répondez trop souvent de la mauvaise manière, l’iceberg fondra plus rapidement. A l’inverse, si vous répondez correctement, vous permettrez à l’iceberg de résister plus longtemps aux effets du réchauffement climatique.
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
