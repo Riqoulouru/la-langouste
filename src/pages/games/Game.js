@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import jsonGame from '../../data/allGame.json';
-import JustePrix from '@/pages/games/justeprix/JustePrix';
-import Famille from '@/pages/games/top10/Famille';
-import Qcm from '@/pages/games/vraifaux/Qcm';
+import JustePrix from "@/pages/games/justeprix/justePrix";
+import Famille from "@/pages/games/top10/famille";
+import Qcm from "@/pages/games/vraifaux/qcm";
 
 const GamesPage = () => {
     const [selectedLevel, setSelectedLevel] = useState(0);
