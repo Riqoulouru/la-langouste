@@ -1,6 +1,13 @@
 {
-    "welcome": "Welcome",
-    "hello": "Hello",
-    "konami": "Hey, you activated the konami code"
+  "welcome": "Welcome",
+  "hello": "Hello",
+  "konami": "Hey, you've activated the Konami code.",
+  "congratulations": "Congratulations! The answer is correct.",
+  "incorrecthigher": "Sorry, the answer is incorrect. It's higher. Try again.",
+  "incorrectlower": "Sorry, the answer is incorrect. It's lower. Try again.",
+  "incorrectnumber": "Sorry, the number is incorrect. Try again.",
+  "rightpricename": "The Right Price",
+  "estimate": "Enter your estimate",
+  "submit": "Submit",
+  "questionnotloaded": "The question could not be loaded"
   }
-  

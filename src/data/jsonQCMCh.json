@@ -1,0 +1,96 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "未来数年内海平面上升是可以避免的。",
+      "reponses": [
+        {
+          "label": "真",
+          "result": false
+        },
+        {
+          "label": "假",
+          "result": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "气候变化导致某些动植物物种灭绝。",
+      "reponses": [
+        {
+          "label": "真",
+          "result": true
+        },
+        {
+          "label": "假",
+          "result": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "脱碳是避免全球变暖的解决方案。",
+      "reponses": [
+        {
+          "label": "真",
+          "result": false
+        },
+        {
+          "label": "假",
+          "result": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "通过改善我们的环境习惯，到2050年我们可以实现温室气体排放的30%到40%的减少。",
+      "reponses": [
+        {
+          "label": "真",
+          "result": false
+        },
+        {
+          "label": "假",
+          "result": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "从2025年开始，全球温室气体排放必须减少，否则将无法将全球变暖限制在1.5°C。",
+      "reponses": [
+        {
+          "label": "真",
+          "result": true
+        },
+        {
+          "label": "假",
+          "result": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "受到海平面上升威胁的人口占多少百分比？",
+      "reponses": [
+        {
+          "label": "1%",
+          "result": false
+        },
+        {
+          "label": "2%",
+          "result": false
+        },
+        {
+          "label": "5%",
+          "result": false
+        },
+        {
+          "label": "10%",
+          "result": true
+        }
+      ]
+    }
+  ]
+}
