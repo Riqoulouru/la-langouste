@@ -9,17 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-
     "next": "^14.0.3",
     "react": "^18",
-    "react-dom": "^18"
-
+    "react-dom": "^18",
     "react-i18next": "^13.5.0",
     "konami-code-js": "^0.8.1",
     "react-konami-code": "^2.3.0",
     "react-router-dom": "^6.20.1",
     "sass": "^1.69.5"
-
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

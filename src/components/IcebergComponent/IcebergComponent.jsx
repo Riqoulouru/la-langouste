@@ -1,15 +1,7 @@
 import React, { useState, useMemo } from 'react';
 
-const IcebergComponent = () => {
-    const [temperature, setTemperature] = useState(0);
+const IcebergComponent = ({temperature}) => {
 
-    const increaseTemperature = () => {
-        setTemperature(temperature + 1);
-    };
-
-    const decreaseTemperature = () => {
-        setTemperature(temperature - 1);
-    };
 
     // Calculer la hauteur du clipPath en fonction de la température
     const clipHeight = useMemo(() => {
@@ -20,9 +12,6 @@ const IcebergComponent = () => {
     return (
         <div>
             <p>Température actuelle : {temperature}°C</p>
-            <button onClick={increaseTemperature}>Augmenter Température</button>
-            <button onClick={decreaseTemperature}>Diminuer Température</button>
-
             <div style={{ width: '300px', height: '300px' }}>
                 <svg cache-id="c81abccd000c4dfc88da8cbdb81b1437" id="iceberg" viewBox="0 0 1080 1920" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
                     <clipPath id="icebergClip">
