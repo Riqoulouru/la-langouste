@@ -128,11 +128,12 @@ const HomePage = () => {
             <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} />
             <div></div>
 
+
             <div className={"errorText"}>
                 {errorMessage}
             </div>
-
             <div className={"iceberg"} style={{width: icebergWidth}}>
+
                 <IcebergComponent temperature={temperature} handleLevelChange={handleLevelChange}/>
             </div>
 
