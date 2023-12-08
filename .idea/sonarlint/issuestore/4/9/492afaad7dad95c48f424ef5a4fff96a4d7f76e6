@@ -1,6 +1,6 @@
 
-Ljavascript:S1128")Remove this unused import of 'useRouter'.(ì‘í„8‘¥¦¿Ä1
-Pjavascript:S6774"-'onGameFinish' is missing in props validation(ñ²¶ð8’¥¦¿Ä1
-Fjavascript:S6774"#'id' is missing in props validation(ñ²¶ð8’¥¦¿Ä1
-Ajavascript:S6479c"Do not use Array index in keys(•Á»î8’¥¦¿Ä1
-Ajavascript:S6479o"Do not use Array index in keys(ØŽÖ¾8“¥¦¿Ä1
+Ljavascript:S1128")Remove this unused import of 'useRouter'.(ì‘í„8à×½¿Ä1
+Pjavascript:S6774"-'onGameFinish' is missing in props validation(ñ²¶ð8á×½¿Ä1
+Fjavascript:S6774"#'id' is missing in props validation(ñ²¶ð8á×½¿Ä1
+Ajavascript:S6479c"Do not use Array index in keys(•Á»î8á×½¿Ä1
+Ajavascript:S6479o"Do not use Array index in keys(ØŽÖ¾8á×½¿Ä1

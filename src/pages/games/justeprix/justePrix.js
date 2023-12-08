@@ -83,32 +83,34 @@ const JustePrixPage = ({ onGameFinish, id }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <h1>{t('rightpricename')}</h1>
-      {currentQuestion ? (
-        <div>
-          <p>{currentQuestion.question}</p>
-          <form onSubmit={handleSubmit}>
-            <label className={styles.label}>
-            {t('estimate')}
-              <input
-                type="number"
-                value={userInput}
-                onChange={handleInputChange}
-                className={styles.input}
-              />
-            </label>
-            <button type="submit" className={styles.button}>
-              {t('submit')}
-            </button>
-            {continueButtonShow && <button className={styles.button} >{t('continue')}</button>}
-          </form>
+
+      <div className={"prix-container"}>
+        <div className={styles.container}>
+          <h1 className={"title"}>{t('rightpricename')}</h1>
+          {currentQuestion ? (
+              <div>
+                <p>{currentQuestion.question}</p>
+                <form onSubmit={handleSubmit}>
+                  <label className={styles.label}>
+                    {t('estimate')}
+                    <input
+                        type="number"
+                        value={userInput}
+                        onChange={handleInputChange}
+                        className={styles.input}
+                    />
+                  </label>
+                  <button type="submit" className={"language-button"}>
+                    {t('submit')}
+                  </button>
+                </form>
+              </div>
+          ) : (
+              <p>t('questionnotloaded')</p>
+          )}
+          {message && <p className={styles.message}>{message}</p>}
         </div>
-      ) : (
-        <p>t('questionnotloaded')</p>
-      )}
-      {message && <p className={styles.message}>{message}</p>}
-    </div>
+      </div>
   );
 };
 

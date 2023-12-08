@@ -6,7 +6,7 @@ import EasterEggModal from '../components/EasterEggModal';
 import SideBar from '../components/SideBar';
 import Konami from 'react-konami-code';
 import styles from "@/styles/Home.module.scss"
-import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
+import {Alert, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
 import Santa from "@/components/Santa";
 import jsonGame from "@/data/jsonSommaire.json";
 import EcoPage from './explainations/ecoconception';
@@ -131,12 +131,13 @@ const HomePage = () => {
             <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} setSideBarWidth={setSideBarWidth} setIcebergWidth={setIcebergWidth}/>
 
 
-            <div className={"errorText"}>
-                {errorMessage}
-            </div>
+            {
+                alertShown ? <Alert severity="error">{errorMessage}</Alert>
+                : <div></div>
+            }
             <div className={"iceberg"} style={{width: icebergWidth}}>
 
-                <IcebergComponent temperature={temperature} handleLevelChange={handleLevelChange}/>
+            <IcebergComponent temperature={temperature} handleLevelChange={handleLevelChange}/>
             </div>
 
             <div>
