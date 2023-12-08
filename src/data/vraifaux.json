@@ -2,6 +2,62 @@
   "questions": [
     {
       "id": 1,
+      "question": "La montée du niveau de la mer est évitable dans les années à venir.",
+      "reponses": [
+        {
+          "label": "Vrai",
+          "result": false
+        },
+        {
+          "label": "Faux",
+          "result": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Les changements climatiques amènent une extinction de certaines espèces animales et végétales.",
+      "reponses": [
+        {
+          "label": "Vrai",
+          "result": true
+        },
+        {
+          "label": "Faux",
+          "result": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "La décarbonisation est une solution pour éviter le réchauffement climatique.",
+      "reponses": [
+        {
+          "label": "Vrai",
+          "result": false
+        },
+        {
+          "label": "Faux",
+          "result": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "En améliorant nos habitudes environnementales, nous pourrions atteindre une diminution de 30% à 40% des émissions des gaz à effets de serre d’ici 2050.",
+      "reponses": [
+        {
+          "label": "Vrai",
+          "result": false
+        },
+        {
+          "label": "Faux",
+          "result": true
+        }
+      ]
+    },
+    {
+      "id": 5,
       "question": "Les émissions mondiales de gaz à effet de serre devront baisser à partir de 2025, sans quoi il sera impossible de limiter le réchauffement de la planète à 1,5°C.",
       "reponses": [
         {
@@ -15,15 +71,23 @@
       ]
     },
     {
-      "id": 2,
-      "question": "La montée du niveau de la mer est évitable dans les années à venir",
+      "id": 6,
+      "question": "Quel est le pourcentage de population menacé par la monté des eaux ?",
       "reponses": [
         {
-          "label": "Vrai",
+          "label": "1%",
           "result": false
         },
         {
-          "label": "Faux",
+          "label": "2%",
+          "result": false
+        },
+        {
+          "label": "5%",
+          "result": false
+        },
+        {
+          "label": "10%",
           "result": true
         }
       ]
