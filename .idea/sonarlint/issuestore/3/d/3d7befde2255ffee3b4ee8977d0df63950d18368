@@ -1,14 +1,20 @@
 
-Ujavascript:S6774	"-'gameFinished' is missing in props validation(÷Ù§¸şÿÿÿÿ8¦Ûß¼Ä1
-Tjavascript:S6774	",'currentGame' is missing in props validation(÷Ù§¸şÿÿÿÿ8§Ûß¼Ä1
-Yjavascript:S6774	"1'handleGameFinish' is missing in props validation(÷Ù§¸şÿÿÿÿ8§Ûß¼Ä1
-Vjavascript:S6774	".'selectedLevel' is missing in props validation(÷Ù§¸şÿÿÿÿ8şŸà¼Ä1
-Ujavascript:S6774	"-'sideBarWidth' is missing in props validation(÷Ù§¸şÿÿÿÿ8ª¨å¼Ä1
-Yjavascript:S6774"1'currentGame.name' is missing in props validation(­ÈÇ§ûÿÿÿÿ8§Ûß¼Ä1
-Rjavascript:S6774"/'currentGame.id' is missing in props validation(‹ÛÅ»8§Ûß¼Ä1
-Sjavascript:S6774"1'currentGame.name' is missing in props validation(¼ş8§Ûß¼Ä1
-Rjavascript:S6774"/'currentGame.id' is missing in props validation(Ú¨àˆ8§Ûß¼Ä1
-Yjavascript:S6774"1'currentGame.name' is missing in props validation(­œ½øÿÿÿÿ8§Ûß¼Ä1
-Qjavascript:S6774"/'currentGame.id' is missing in props validation(ÀÅ•8¨Ûß¼Ä1
-ljavascript:S3358"DExtract this nested ternary operation into an independent statement.(¼ş™Êøÿÿÿÿ8Ã™Ş¼Ä1
-ljavascript:S3358"DExtract this nested ternary operation into an independent statement.(¨•†ºúÿÿÿÿ8Ä™Ş¼Ä1
+Ujavascript:S6774"-'gameFinished' is missing in props validation(ÚÀ–ïùÿÿÿÿ8Šùñ¾Ä1
+Tjavascript:S6774",'currentGame' is missing in props validation(ÚÀ–ïùÿÿÿÿ8ùñ¾Ä1
+Yjavascript:S6774"1'handleGameFinish' is missing in props validation(ÚÀ–ïùÿÿÿÿ8ùñ¾Ä1
+Vjavascript:S6774".'selectedLevel' is missing in props validation(ÚÀ–ïùÿÿÿÿ8ùñ¾Ä1
+Ujavascript:S6774"-'sideBarWidth' is missing in props validation(ÚÀ–ïùÿÿÿÿ8ùñ¾Ä1
+Xjavascript:S6774"0'setSideBarWidth' is missing in props validation(ÚÀ–ïùÿÿÿÿ8ùñ¾Ä1
+Xjavascript:S6774"0'setIcebergWidth' is missing in props validation(ÚÀ–ïùÿÿÿÿ8ùñ¾Ä1
+|javascript:S3776"TRefactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.(ÚÀ–ïùÿÿÿÿ8‘ùñ¾Ä1
+Yjavascript:S6774"1'currentGame.name' is missing in props validation(­ÈÇ§ûÿÿÿÿ8‘ùñ¾Ä1
+Rjavascript:S6774"/'currentGame.id' is missing in props validation(‹ÛÅ»8‘ùñ¾Ä1
+Sjavascript:S6774"1'currentGame.name' is missing in props validation(¼ş8‘ùñ¾Ä1
+Rjavascript:S6774"/'currentGame.id' is missing in props validation(Ú¨àˆ8‘ùñ¾Ä1
+Yjavascript:S6774"1'currentGame.name' is missing in props validation(­œ½øÿÿÿÿ8‘ùñ¾Ä1
+Qjavascript:S6774"/'currentGame.id' is missing in props validation(ÀÅ•8‘ùñ¾Ä1
+ljavascript:S3358"DExtract this nested ternary operation into an independent statement.(¼ş™Êøÿÿÿÿ8‘ùñ¾Ä1
+ljavascript:S3358"DExtract this nested ternary operation into an independent statement.(¨•†ºúÿÿÿÿ8‘ùñ¾Ä1
+ljavascript:S3358!"DExtract this nested ternary operation into an independent statement.(—µ®˜şÿÿÿÿ8‘ùñ¾Ä1
+ljavascript:S3358#"DExtract this nested ternary operation into an independent statement.(ã…†öøÿÿÿÿ8‘ùñ¾Ä1
+fjavascript:S3358%"DExtract this nested ternary operation into an independent statement.(¤—¡g8‘ùñ¾Ä1

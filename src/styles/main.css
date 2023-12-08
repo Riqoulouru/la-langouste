@@ -10,9 +10,16 @@ body {
 }
 
 .side-bar {
-    background-color: black;
     height: 100vh;
     transition: width ease-in-out .35s;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.side-bar::-webkit-scrollbar {
+    display: none;
 }
 
 .language-container {
@@ -110,4 +117,36 @@ body {
     align-items: center;
     height: 100vh;
     transition: width ease-in-out .35s;
+}
+
+.game-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    padding: 10px 20px;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.table {
+    background-color: white;
+    width: 20vw;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.table > tbody {
+    text-align: center;
+}
+
+.spacer-bottom-5 {
+    margin-bottom: 5vh;
 }
