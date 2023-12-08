@@ -1,3 +1,6 @@
+
+import '/src/styles/explanations/main.css';
+
 // pages/_app.js
 import React from 'react';
 import { I18nextProvider } from 'react-i18next';
