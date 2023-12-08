@@ -4,7 +4,11 @@ import JustePrix from "@/pages/games/justeprix/justePrix";
 import Famille from "@/pages/games/top10/famille";
 import Qcm from "@/pages/games/vraifaux/qcm";
 import IcebergComponent from '@/components/IcebergComponent/IcebergComponent';
-
+import ExplainationOne from "@/pages/explainations/level_one/index";
+import ExplainationTwo from "@/pages/explainations/level_two/index";
+import ExplainationThree from "@/pages/explainations/level_three/index";
+import ExplainationFour from "@/pages/explainations/level_four/index";
+import ExplainationFive from "@/pages/explainations/level_five/index";
 import styles from "@/styles/Game.module.scss";
 const GamesPage = () => {
     const [selectedLevel, setSelectedLevel] = useState(0);
@@ -13,7 +17,7 @@ const GamesPage = () => {
     const [gameFinished, setGameFinished] = useState(false);
     const [timeRemaining, setTimeRemaining] = useState(20); // Temps initial en secondes
     const [temperature, setTemperature] = useState(0);
-
+    const [timerStarted, setTimerStarted] = useState(false);
 
     const handleIncrease = () => {
         setTemperature((prevTemperature) => prevTemperature + 1);
@@ -23,7 +27,10 @@ const GamesPage = () => {
         setTemperature((prevTemperature) => prevTemperature - 1);
     };
 
+
+
     const handleLevelChange = (level) => {
+        setTimerStarted(true);
         setSelectedLevel(level);
         setCurrentGameIndex(1);
         setGameFinished(false);
@@ -45,25 +52,27 @@ const GamesPage = () => {
 
         if (gamesRemaining === 1) {
             setGameFinished(true);
+            setTimerStarted(false);
         } else {
             setCurrentGameIndex((prevIndex) => prevIndex + 1);
         }
     };
 
     useEffect(() => {
-        if (timeRemaining > 0) {
+
+        if (timerStarted && timeRemaining > 0) {
             const countdown = setInterval(() => {
                 setTimeRemaining((prevTime) => prevTime - 1);
             }, 1000);
 
             return () => clearInterval(countdown);
-        } else {
+        } else if (timeRemaining <= 0) {
             //incrémenter temperature
             //rmettre à 0 le temps
             handleIncrease();
             setTimeRemaining(20)
         }
-    }, [timeRemaining, gameFinished]);
+    }, [timeRemaining, timerStarted]);
 
     const filteredGames = jsonGame.filter((game) => game.level === selectedLevel);
     const currentGame = filteredGames[0]?.games[currentGameIndex];
@@ -79,10 +88,11 @@ const GamesPage = () => {
                 ))}
             </div>
 
-                <div>
-                    <button onClick={handleIncrease}>Augmenter la température</button>
-                    <p>Temps restant : {timeRemaining} secondes</p>
-                    {currentGame && (
+            <div>
+                <button onClick={handleIncrease}>Augmenter la température</button>
+                <p>Temps restant : {timeRemaining} secondes</p>
+                {!gameFinished ? (
+                    currentGame && (
                         <>
                             {currentGame.name === 'JustePrix' && (
                                 <JustePrix onGameFinish={handleGameFinish} id={currentGame.id} />
@@ -94,11 +104,19 @@ const GamesPage = () => {
                                 <Qcm onGameFinish={handleGameFinish} id={currentGame.id} />
                             )}
                         </>
-                    )}
-                    <div className={styles.iceBerg}>
-                        <IcebergComponent temperature={temperature}/>
-                    </div>
+                    )
+                ) : selectedLevel === 1 ? (
+                    <ExplainationOne></ExplainationOne>
+                ) : selectedLevel === 2 ? (
+                    <ExplainationTwo></ExplainationTwo>
+                ) : (
+                    <p>Bravo, vous avez terminé tous les jeux !</p>
+                )}
+
+                <div className={styles.iceBerg}>
+                    <IcebergComponent temperature={temperature}/>
                 </div>
+            </div>
 
         </div>
     );
