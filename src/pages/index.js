@@ -6,7 +6,7 @@ import EasterEggModal from '../components/EasterEggModal';
 import SideBar from '../components/SideBar';
 import Konami from 'react-konami-code';
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
-import jsonGame from "@/data/allGame.json";
+import jsonGame from "@/data/jsonSommaire.json";
 
 
 
@@ -117,7 +117,7 @@ const HomePage = () => {
 
     return (
         <div className={"main-content"}>
-            <SideBar gameFinished={gameFinished} currentGame={currentGameIndex} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} />
+            <SideBar gameFinished={gameFinished} currentGame={currentGame} handleGameFinish={handleGameFinish} selectedLevel={selectedLevel} sideBarWidth={sideBarWidth} />
             <div></div>
 
             <div className={"iceberg"} style={{width: icebergWidth}}>
