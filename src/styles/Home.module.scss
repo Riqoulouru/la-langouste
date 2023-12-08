@@ -10,6 +10,12 @@
   0% {
     transform: translateX(-5em);
   }
+  30% {
+    transform: translate(40em, 20em);
+  }
+  40% {
+    transform: translate(40em, 20em);
+  }
   100% {
     transform: translateX(100em);
   }

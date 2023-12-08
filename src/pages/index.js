@@ -35,7 +35,6 @@ const HomePage = () => {
     const [gamePossible, setGamePossible] = useState(1);
     const [errorMessage, setErrorMessage] = useState('');
     const easterEgg = () => {
-        alert(t('konami'));
         setEasterEggActivated(true);
     }
 
