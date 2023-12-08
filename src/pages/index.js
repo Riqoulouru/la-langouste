@@ -3,9 +3,6 @@ import IcebergComponent from '../components/IcebergComponent/IcebergComponent'; 
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';
 import EasterEggModal from '../components/EasterEggModal'; // Assure-toi d'ajuster le chemin d'accès
-
-import { useTranslation } from 'react-i18next';
-
 import Link from 'next/link';
 import Konami from 'react-konami-code';
 import styles from "@/styles/Home.module.scss"
