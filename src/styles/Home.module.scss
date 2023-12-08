@@ -3,6 +3,7 @@
   background: aqua;
   position: relative; /* Assurez-vous que .test a une position relative pour que .mysvg se positionne correctement à l'intérieur. */
   overflow: hidden; /* Assurez-vous que le contenu dépassant de .test est masqué. */
+  z-index: -1000;
 }
 
 @keyframes moveAnimation {

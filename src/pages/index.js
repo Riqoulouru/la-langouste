@@ -7,6 +7,7 @@ import SideBar from '../components/SideBar';
 import Konami from 'react-konami-code';
 import styles from "@/styles/Home.module.scss"
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
+import Santa from "@/components/Santa";
 import jsonGame from "@/data/jsonSommaire.json";
 import EcoPage from './explainations/ecoconception';
 
@@ -52,25 +53,6 @@ const HomePage = () => {
 
         return () => clearTimeout(resetTimeout);
     }, [easterEggActivated]);
-
-    const getRandomDelay = () => {
-        // Générer un délai aléatoire entre 1 et 2 minutes
-        return Math.random() * (60000 - 120000) + 60000;
-    }
-
-    const randomTimer = Math.round(getRandomDelay)
-
-    const handleAnimationIteration = (event) => {
-        // Mettre à jour le délai pour chaque itération de l'animation
-        event.target.style.animationDelay = `${randomTimer}ms`;
-
-        // Réapparition aléatoire après le délai
-        setTimeout(() => {
-            event.target.classList.remove(styles.appearAnimation);
-            void event.target.offsetWidth; // Force a reflow to restart the animation
-            event.target.classList.add(styles.appearAnimation);
-        }, randomTimer);
-    }
 
     useEffect(() => {
         // Reset l'état d'activation après un certain temps (par exemple, 5 secondes)
