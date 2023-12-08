@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "question": "Quels sont les pays les plus polluants en 2021 ?",
+    "reponses": [
+      "Chine",
+      "USA",
+      "Inde",
+      "Russie",
+      "Japon"
+    ],
+    "proposition": [
+      "USA",
+      "France",
+      "Inde",
+      "Allemagne",
+      "Corée du sud",
+      "Brésil",
+      "Chine",
+      "Canada",
+      "Japon",
+      "Royaume-Uni",
+      "Russie"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Quels sont les véhicules les plus polluants en 2020 ?",
+    "reponses": [
+      "Voiture",
+      "Camion",
+      "Avion",
+      "Train",
+      "Bus"
+    ],
+    "proposition": [
+      "Avion",
+      "Bateau",
+      "Moto",
+      "Bus",
+      "Vélo",
+      "Roller",
+      "Camion",
+      "Train",
+      "Skate",
+      "Voiture"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "En 2019, quels sont les secteurs ayant émis le plus de gaz à effets de serre ?",
+    "reponses": [
+      "Production d'énergie",
+      "Industrie",
+      "Agriculture",
+      "Transport",
+      "BTP"
+    ],
+    "proposition": [
+      "Transport",
+      "Finance",
+      "BTP",
+      "Production d'énergie",
+      "Tourisme",
+      "Agriculture",
+      "Télécommunications",
+      "Média",
+      "Sport",
+      "Industrie"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Quelle est la part des énergies renouvelables les plus utilisées en 2020 ?",
+    "reponses": [
+      "Hydro-électrique",
+      "Eolien",
+      "Biomasse",
+      "Géothermie",
+      "Solaire"
+    ],
+    "proposition": [
+      "Houlomotrice",
+      "Solaire",
+      "Eolien",
+      "Biogaz",
+      "Thermique urbaine",
+      "Géothermie",
+      "Hydro-électrique",
+      "Thermique marine",
+      "Biomasse",
+      "Maréomotrice"
+    ]
+  }
+]
