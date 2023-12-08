@@ -1,10 +1,10 @@
-// src/pages/games/justeprix/[id].js
+// src/pages/games/justeprix/justePrix.js
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import styles from './JustePrixPage.module.css';
+import styles from '../../../styles/JustePrixPage.module.css';
 import questionsData from '../../../data/justeprix.json';
 
-const JustePrixPage = () => {
+const JustePrixPage = ({onGameFinish,id}) => {
   const router = useRouter();
   const [userInput, setUserInput] = useState('');
   const [currentQuestion, setCurrentQuestion] = useState(null);
@@ -12,7 +12,7 @@ const JustePrixPage = () => {
 
   useEffect(() => {
     // Fetch the question based on the ID from the URL or a parameter
-    const { id } = router.query;
+
     const selectedQuestion = questionsData.find((question) => question.id === parseInt(id, 10));
 
     if (selectedQuestion) {
@@ -43,6 +43,7 @@ const JustePrixPage = () => {
       } else {
         setMessage('Désolé, la réponse est incorrecte. C\'est moins. Essayez à nouveau.');
       }
+      onGameFinish(true);
     } else {
       setMessage('Veuillez entrer un nombre valide.');
     }

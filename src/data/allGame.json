@@ -1,0 +1,54 @@
+[
+  {
+    "level": 1,
+    "games": {
+      "1": {
+        "id": 1,
+        "name": "Famille"
+      },
+      "2": {
+        "id": 2,
+        "name": "JustePrix"
+      },
+      "3": {
+        "id": 1,
+        "name": "qcm"
+      }
+    }
+  },
+  {
+    "level": 2,
+    "games": {
+      "1": {
+        "id": 4,
+        "name": "Nouveau jeu 1"
+      },
+      "2": {
+        "id": 5,
+        "name": "Nouveau jeu 2"
+      },
+      "3": {
+        "id": 6,
+        "name": "Nouveau jeu 3"
+      }
+    }
+  },
+  {
+    "level": 3,
+    "games": {
+      "1": {
+        "id": 7,
+        "name": "Autre jeu 1"
+      },
+      "2": {
+        "id": 8,
+        "name": "Autre jeu 2"
+      },
+      "3": {
+        "id": 9,
+        "name": "Autre jeu 3"
+      }
+    }
+  }
+
+]
