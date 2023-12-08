@@ -16,6 +16,9 @@ const LevelFour = () => {
                 </div>
 
             </div>
+
+            <WaveSVG />
+
             <div className={"level-container"}>
                 <h1 className={"title"}>Industrie : les technologies pour décarboner existent</h1>
                 <div className={"spacer-4 div-explanation-content"}>
@@ -26,6 +29,9 @@ const LevelFour = () => {
                 </div>
 
             </div>
+
+            <WaveSVG />
+
             <div className={"level-container"}>
                 <h1 className={"title"}>Agriculture et alimentation : moins de viande, plus de pratiques durables</h1>
                 <div className={"spacer-4 div-explanation-content"}>
@@ -34,7 +40,10 @@ const LevelFour = () => {
                 <div className={"spacer-2 div-explanation-content"}>
                     Les forêts et écosystèmes absorbent du carbone, il est donc important de les protéger et de lutter contre la déforestation. Toutefois, cela ne pourra pas compenser la réduction des émissions, qui doit rester la priorité dans tous les secteurs.
                 </div>
-        </div>
+            </div>
+
+            <WaveSVG />
+
             <div className={"level-container"}>
                 <h1 className={"title"}>Transports : transformer les mobilités individuelles</h1>
                 <div className={"spacer-4 div-explanation-content"}>

@@ -20,6 +20,7 @@ const LevelFive = () => {
             </div>
 
             <WaveSVG />
+
             <div className={"level-container"}>
                 <h1 className={"title"}>Par rapport aux énergies renouvelables ?</h1>
 
