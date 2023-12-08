@@ -38,12 +38,15 @@ const JustePrixPage = ({onGameFinish,id}) => {
     if (!isNaN(userAnswer)) {
       if (userAnswer === correctAnswer) {
         setMessage('Bravo ! La réponse est correcte.');
+        onGameFinish(true);
       } else if (userAnswer < correctAnswer) {
         setMessage('Désolé, la réponse est incorrecte. C\'est plus. Essayez à nouveau.');
+        onGameFinish(false);
       } else {
         setMessage('Désolé, la réponse est incorrecte. C\'est moins. Essayez à nouveau.');
+        onGameFinish(false);
       }
-      onGameFinish(true);
+
     } else {
       setMessage('Veuillez entrer un nombre valide.');
     }

@@ -27,7 +27,11 @@ const GamePage = ({onGameFinish,id }) => {
     useEffect(() => {
         if (processingAnswer) {
             // Vérification de fin de jeu après mise à jour des réponses trouvées
-            if (chancesLeft === 0 || foundAnswers.every(answer => answer !== '')) {
+            if (chancesLeft === 0 ) {
+                onGameFinish(false);
+                setUserInput('');
+                setFeedback('');
+            } else if (foundAnswers.every(answer => answer !== '')) {
                 onGameFinish(true);
                 setUserInput('');
                 setFeedback('');

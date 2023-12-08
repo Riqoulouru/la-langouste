@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import jsonGame from '../../data/allGame.json';
 import JustePrix from "@/pages/games/justeprix/justePrix";
 import Famille from "@/pages/games/top10/famille";
@@ -9,6 +9,9 @@ const GamesPage = () => {
     const [currentGameIndex, setCurrentGameIndex] = useState(1);
     const [gamesRemaining, setGamesRemaining] = useState(0);
     const [gameFinished, setGameFinished] = useState(false);
+    const [timeRemaining, setTimeRemaining] = useState(300); // Temps initial en secondes
+
+
 
     const handleLevelChange = (level) => {
         setSelectedLevel(level);
@@ -21,15 +24,35 @@ const GamesPage = () => {
         setGamesRemaining(totalGames ? Object.keys(totalGames).length : 0);
     };
 
-    const handleGameFinish = () => {
+    const handleGameFinish = (isCorrectAnswer) => {
         setGamesRemaining((prevRemaining) => prevRemaining - 1);
-        console.log(gamesRemaining);
+
+        if (isCorrectAnswer) {
+            setTimeRemaining((prevTime) => prevTime + 100); // Ajouter 10 secondes pour une bonne réponse
+        } else {
+            setTimeRemaining((prevTime) => Math.max(prevTime - 100, 0)); // Retirer 5 secondes pour une mauvaise réponse (minimum 0)
+        }
+
         if (gamesRemaining === 1) {
-            setGameFinished(true); // Tous les jeux ont été joués pour ce niveau
+            setGameFinished(true);
         } else {
             setCurrentGameIndex((prevIndex) => prevIndex + 1);
         }
     };
+
+    useEffect(() => {
+        if (timeRemaining > 0) {
+            const countdown = setInterval(() => {
+                setTimeRemaining((prevTime) => prevTime - 1);
+            }, 1000);
+
+            return () => clearInterval(countdown);
+        } else {
+            //incrémenter temperature
+            //rmettre à 0 le temps
+            setTimeRemaining(300)
+        }
+    }, [timeRemaining, gameFinished]);
 
     const filteredGames = jsonGame.filter((game) => game.level === selectedLevel);
     const currentGame = filteredGames[0]?.games[currentGameIndex];
@@ -48,6 +71,7 @@ const GamesPage = () => {
                 <p>Bravo, vous avez terminé tous les jeux de ce niveau !</p>
             ) : (
                 <div>
+                    <p>Temps restant : {timeRemaining} secondes</p>
                     {currentGame && (
                         <>
                             {currentGame.name === 'JustePrix' && (

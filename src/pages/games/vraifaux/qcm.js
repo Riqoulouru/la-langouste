@@ -33,10 +33,12 @@ const QuestionPage = ({onGameFinish, id}) => {
 
             if (selectedLabel === correctAnswer.label) {
                 setIsAnswerCorrect(true);
+                onGameFinish(true);
             } else {
                 setIsAnswerCorrect(false);
+                onGameFinish(false);
             }
-            onGameFinish(true);
+
         }
     };
 
