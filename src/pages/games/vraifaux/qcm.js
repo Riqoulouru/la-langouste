@@ -11,7 +11,7 @@ const QuestionPage = ({onGameFinish, id}) => {
     const { t, i18n } = useTranslation('translation');
     const router = useRouter();
     const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
-
+    const [response, setResponse] = useState('');
 
     // Convertis l'ID en nombre
     const questionId = parseInt(id, 10);
@@ -56,14 +56,20 @@ const QuestionPage = ({onGameFinish, id}) => {
 
             if (selectedLabel === correctAnswer.label) {
                 setIsAnswerCorrect(true);
-                onGameFinish(true);
             } else {
                 setIsAnswerCorrect(false);
-                onGameFinish(false);
             }
 
         }
     };
+
+    function continueButtonNok() {
+        onGameFinish(false);
+    }
+
+    function continueButtonOk() {
+        onGameFinish(true);
+    }
 
     return (
         <div>
@@ -80,11 +86,18 @@ const QuestionPage = ({onGameFinish, id}) => {
                 <button className={"language-button"} onClick={checkAnswer}>Valider</button>
 
                 {isAnswerCorrect === false && (
-                    <p style={{color: 'red'}}>La réponse est incorrecte.</p>
+                    <p style={{color: 'red'}}>  La réponse est incorrecte.  </p>
+                )}
+
+                {isAnswerCorrect === false && (
+                    <button id="continueButton" className={"language-button"} onClick={continueButtonNok}>Continuer</button>
                 )}
 
                 {isAnswerCorrect === true && (
-                    <p style={{color: 'green'}}>Bonne réponse !</p>
+                    <p style={{color: 'green'}} className={"spaceUs"}>Bonne réponse !  </p>
+                )}
+                {isAnswerCorrect === true && (
+                    <button id="continueButton" className={"language-button"} onClick={continueButtonOk} >Continuer</button>
                 )}
             </div>
         </div>

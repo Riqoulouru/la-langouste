@@ -12,6 +12,7 @@ const GamePage = ({onGameFinish,id }) => {
     const [chancesLeft, setChancesLeft] = useState(3);
     const [foundAnswers, setFoundAnswers] = useState([]);
     const [processingAnswer, setProcessingAnswer] = useState(false);
+    const [showResponse, setShowResponse] = useState('');
 
     useEffect(() => {
         // Recherche de la question dans le JSON en fonction de l'ID
@@ -115,6 +116,7 @@ const GamePage = ({onGameFinish,id }) => {
 
                         </div>
                     </div>
+                    {<div className={"spacer-4"}>{showResponse}</div>}
                 </div>
             ) : (
                 <p>Chargement...</p>
