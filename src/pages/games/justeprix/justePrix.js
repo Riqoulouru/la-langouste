@@ -15,13 +15,11 @@ const JustePrixPage = ({ onGameFinish, id }) => {
   const [userInput, setUserInput] = useState('');
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [message, setMessage] = useState('');
-
+  const [continueButtonShow , setContinueButtonShow] = useState(false);
   useEffect(() => {
     // Fetch the question based on the ID from the URL or a parameter
 
     let jsonQuestions;
-    console.log("QCM")
-    console.log(i18n.language)
     switch (i18n.language) {
       case 'en':
         jsonQuestions = jsonJustePrixEn;
@@ -49,23 +47,34 @@ const JustePrixPage = ({ onGameFinish, id }) => {
     setUserInput(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Your logic for checking the answer
     const userAnswer = parseInt(userInput, 10);
     const correctAnswer = parseInt(currentQuestion.reponse, 10);
 
+    function waitForUserAction() {
+      return new Promise((resolve) => {
+        // Ici, vous pouvez utiliser un événement ou une interaction utilisateur
+        // Par exemple, attacher un événement à un bouton pour résoudre la promesse lorsqu'il est cliqué
+        document.getElementById('yourButton').addEventListener('click', () => {
+          resolve('Action utilisateur terminée !');
+        });
+      });
+    }
+
     if (!isNaN(userAnswer)) {
       if (userAnswer === correctAnswer) {
         setMessage(t('congratulations'));
+        setContinueButtonShow(true)
+        const result = await waitForUserAction();
+        setContinueButtonShow(false)
         onGameFinish(true);
       } else if (userAnswer < correctAnswer) {
         setMessage(t('incorrecthigher'));
-        onGameFinish(false);
       } else {
         setMessage(t('incorrectlower'));
-        onGameFinish(false);
       }
 
     } else {
@@ -92,6 +101,7 @@ const JustePrixPage = ({ onGameFinish, id }) => {
             <button type="submit" className={styles.button}>
               {t('submit')}
             </button>
+            {continueButtonShow && <button className={styles.button} >{t('continue')}</button>}
           </form>
         </div>
       ) : (
